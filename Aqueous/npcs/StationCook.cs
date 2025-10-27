@@ -1,4 +1,4 @@
-namespace WorldOfZuul;
+namespace Aqueous;
 
 public class StationCook : NPC {
     public override string GetName() {

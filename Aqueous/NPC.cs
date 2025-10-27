@@ -1,4 +1,4 @@
-namespace WorldOfZuul;
+namespace Aqueous;
 
 public class NPC {
     public virtual string GetName() {

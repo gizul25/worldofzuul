@@ -3,7 +3,7 @@
 ## Arch Linux
 
 ```sh
-sudo pacman -S dotnet-sdk-6.0
+sudo pacman -S dotnet-sdk-8.0
 # Verify installation
 dotnet --list-sdks
 ```
@@ -12,25 +12,26 @@ One way to build project:
 
 ```sh
 dotnet publish
-./WorldOfZuul/bin/Debug/net6.0/WorldOfZuul
+./Aqueous/bin/Debug/net6.0/Aqueous
 ```
 
 Or run immediately:
 
 ```sh
-dotnet run --project WorldOfZuul/WorldOfZuul.csproj
+cd Aqueous
+dotnet run
 ```
 
 Finally build a release version:
 
 ```sh
 dotnet publish -c Release
-./WorldOfZuul/bin/Release/net6.0/WorldOfZuul
+./Aqueous/bin/Release/net6.0/Aqueous
 ```
 
 Or self-contained release version (supposedly self-contained but requires .NET eitherways):
 
 ```sh
 dotnet publish -c Release -r linux-x64 --self-contained
-./WorldOfZuul/bin/Release/net6.0/linux-x64/publish/WorldOfZuul
+./Aqueous/bin/Release/net6.0/linux-x64/publish/Aqueous
 ```

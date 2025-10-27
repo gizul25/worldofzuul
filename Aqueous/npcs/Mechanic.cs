@@ -1,4 +1,4 @@
-namespace WorldOfZuul;
+namespace Aqueous;
 
 public class Mechanic : NPC {
     public override string GetName() {

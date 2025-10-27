@@ -1,4 +1,4 @@
-namespace WorldOfZuul;
+namespace Aqueous;
 
 public class StorageManager : NPC {
     public override string GetName() {
