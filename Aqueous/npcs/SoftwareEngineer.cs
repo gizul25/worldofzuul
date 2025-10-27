@@ -1,4 +1,4 @@
-namespace WorldOfZuul;
+namespace Aqueous;
 
 public class SoftwareEngineer : NPC {
     public override string GetName() {
