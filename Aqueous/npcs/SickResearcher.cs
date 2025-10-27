@@ -1,6 +1,6 @@
 namespace Aqueous;
 
-public class SickResearches : NPC
+public class SickResearcher : NPC
 {
     public override string GetName() {
         return "Steve";
