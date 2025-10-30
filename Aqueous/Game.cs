@@ -14,7 +14,9 @@
         {
             PrintWelcome();
 
-            while (CommandManager.Run(state)) {}
+            while (!state.ShouldExit) {
+                CommandManager.Run(state);
+            }
             Console.WriteLine("Thank you for playing Aqueous!");
         }
 

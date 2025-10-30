@@ -4,7 +4,8 @@ public class CommandManager {
     private static Command[] commands = [
         new HelpCommand(),
         new LookCommand(),
-        new MoveCommand()
+        new MoveCommand(),
+        new QuitCommand()
     ];
     
     public static bool Run(GameState state) {
