@@ -6,7 +6,7 @@ public class MoveCommand : Command {
             Direction direction = DirectionHelper.DirectionFromString(input);
             Run(state, direction);
             return true;
-        } catch (Exception e) {
+        } catch (Exception) {
             return false;
         }
     }

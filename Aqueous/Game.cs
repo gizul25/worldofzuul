@@ -3,49 +3,18 @@
     public class Game
     {
         private GameState state;
-        private Command[] commands = [
-            new HelpCommand(),
-            new LookCommand(),
-            new MoveCommand()
-        ];
 
         public Game()
         {
-            CreateRooms();
-        }
-
-        private void CreateRooms()
-        {
-            Room crewCabin = new CrewCabin();
-            state = new GameState(crewCabin);
-        }
-
-        public bool Tick() {
-            Console.WriteLine(state.CurrentRoom.GetDescription());
-            Console.Write("> ");
-
-            string? input = Console.ReadLine();
-
-            if (string.IsNullOrEmpty(input)) {
-                Console.WriteLine("Please enter a command.");
-                return true;
-            }
-
-            foreach (Command command in commands) {
-                if (command.TryExecute(input, state)) {
-                    return true;
-                }
-            }
-
-            Console.WriteLine("Invalid command.");
-            return true;
+            Room startingRoom = RoomManager.CreateRooms();
+            state = new GameState(startingRoom);
         }
 
         public void Play()
         {
             PrintWelcome();
 
-            while (Tick()) {}
+            while (CommandManager.Run(state)) {}
             Console.WriteLine("Thank you for playing World of Zuul!");
         }
 

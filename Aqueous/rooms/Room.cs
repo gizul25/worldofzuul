@@ -22,6 +22,10 @@
 
         public void SetExit(Direction direction, Room? neighbor)
         {
+            if (neighbor == null) {
+                Exits.Remove(direction);
+                return;
+            }
             Exits[direction] = neighbor;
         }
     }
