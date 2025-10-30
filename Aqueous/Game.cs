@@ -15,13 +15,13 @@
             PrintWelcome();
 
             while (CommandManager.Run(state)) {}
-            Console.WriteLine("Thank you for playing World of Zuul!");
+            Console.WriteLine("Thank you for playing Aqueous!");
         }
 
         private static void PrintWelcome()
         {
-            Console.WriteLine("Welcome to the World of Zuul!");
-            Console.WriteLine("World of Zuul is a new, incredibly boring adventure game.");
+            Console.WriteLine("Welcome to the Aqueous!");
+            Console.WriteLine("Aqueous is an underwater research station game.");
             HelpCommand.PrintHelp();
             Console.WriteLine();
         }
