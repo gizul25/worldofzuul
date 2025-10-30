@@ -14,7 +14,7 @@ public class RoomManager {
         Room reactor = new Reactor();
         Room security = new Security();
         Room coolingSystem = new CoolingSystem();
-        Room electrical = new Electricals();
+        Room electrical = new Electrical();
         Room storage = new Storage();
         Room delivery = new Delivery();
         Room communications = new Communications();

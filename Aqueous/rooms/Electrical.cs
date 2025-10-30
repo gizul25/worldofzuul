@@ -1,11 +1,11 @@
 namespace Aqueous;
 
-public class Electricals : Room {
+public class Electrical : Room {
     public override string GetName() {
-        return "Electricals";
+        return "Electrical";
     }
 
     public override string GetDescription() {
-        return "This is a Electricals";
+        return "This is a Electrical";
     }
 }
