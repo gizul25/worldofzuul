@@ -2,28 +2,27 @@
 {
     public class Room
     {
-        public string ShortDescription { get; private set; }
-        public string LongDescription { get; private set;}
-        public Dictionary<string, Room> Exits { get; private set; } = new();
+        public Dictionary<Direction, Room> Exits { get; private set; } = new();
 
-        public Room(string shortDesc, string longDesc)
-        {
-            ShortDescription = shortDesc;
-            LongDescription = longDesc;
+        public virtual string GetName() {
+            return "unimplemented";
+        }
+
+        public virtual string GetDescription() {
+            return "unimplemented";
         }
 
         public void SetExits(Room? north, Room? east, Room? south, Room? west)
         {
-            SetExit("north", north);
-            SetExit("east", east);
-            SetExit("south", south);
-            SetExit("west", west);
+            SetExit(Direction.North, north);
+            SetExit(Direction.East, east);
+            SetExit(Direction.South, south);
+            SetExit(Direction.West, west);
         }
 
-        public void SetExit(string direction, Room? neighbor)
+        public void SetExit(Direction direction, Room? neighbor)
         {
-            if (neighbor != null)
-                Exits[direction] = neighbor;
+            Exits[direction] = neighbor;
         }
     }
 }

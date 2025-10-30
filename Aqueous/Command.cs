@@ -1,20 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Aqueous;
 
-namespace Aqueous
-{
-    public class Command
-    {
-        public string Name { get; }
-        public string? SecondWord { get; } // this might be used for future expansions, such as "take apple".
-
-        public Command(string name, string? secondWord = null)
-        {
-            Name = name;
-            SecondWord = secondWord;
-        }
-    }
+public abstract class Command {
+    public abstract bool TryExecute(string input, GameState state);
 }
