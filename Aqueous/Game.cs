@@ -16,6 +16,7 @@
 
             while (!state.ShouldExit) {
                 CommandManager.Run(state);
+                state.actionManager.UpdateAvailableActions(state);
             }
             Console.WriteLine("Thank you for playing Aqueous!");
         }

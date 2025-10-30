@@ -5,7 +5,9 @@ public class CommandManager {
         new HelpCommand(),
         new LookCommand(),
         new MoveCommand(),
-        new QuitCommand()
+        new QuitCommand(),
+        new ActionsCommand(),
+        new DoCommand()
     ];
     
     public static bool Run(GameState state) {
