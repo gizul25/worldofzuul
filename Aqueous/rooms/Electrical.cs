@@ -1,4 +1,4 @@
-namespace Electricals;
+namespace Aqueous;
 
 public class Electricals : Room {
     public override string GetName() {

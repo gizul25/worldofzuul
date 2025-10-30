@@ -1,6 +1,6 @@
-namespace Coolingsystem;
+namespace Aqueous;
 
-public class Coolingsystem : Room {
+public class CoolingSystem : Room {
     public override string GetName() {
         return "Cooling system";
     }

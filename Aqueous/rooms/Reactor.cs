@@ -1,4 +1,4 @@
-namespace Reactor;
+namespace Aqueous;
 
 public class Reactor : Room
 {
