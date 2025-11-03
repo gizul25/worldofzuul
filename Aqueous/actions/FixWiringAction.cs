@@ -6,10 +6,10 @@ public class FixWiringAction : Action {
     }
 
     public override bool CanPerform(GameState state) {
-        return state.CurrentRoom is Cafeteria;
+        return state.CurrentRoom is Electrical;
     }
 
     public override void Perform(GameState state) {
-        Console.WriteLine("Fixing electricall....");
+        Console.WriteLine("Fixing electrical....");
     }
 }
