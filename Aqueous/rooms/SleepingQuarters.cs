@@ -6,6 +6,6 @@ public class SleepingQuarters : Room {
     }
 
     public override string GetDescription() {
-        return "These are the crew's sleeping quarters";
+        return "So quiet in here...";
     }
 }

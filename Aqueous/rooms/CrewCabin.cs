@@ -6,6 +6,8 @@ public class CrewCabin : Room {
     }
 
     public override string GetDescription() {
-        return "This is a crew cabin";
+        return @"The culmination of your being. 
+You remember yourself starting from this point for as long as you can remember. 
+Welcome to the Crew Cabin";
     }
 }

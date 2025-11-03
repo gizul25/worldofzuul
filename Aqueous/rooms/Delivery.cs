@@ -6,6 +6,6 @@ public class Delivery : Room {
     }
 
     public override string GetDescription() {
-        return "This is the Delivery";
+        return "They don't tell where the provisions come from. ";
     }
 }
