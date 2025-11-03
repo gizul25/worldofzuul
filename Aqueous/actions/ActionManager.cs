@@ -2,7 +2,16 @@ namespace Aqueous;
 
 public class ActionManager {
     static Action[] allActions = [
-        new FixWiringAction()
+        new FixWiringAction(),
+        new EatFood(),
+        new Sleep(),
+        new CheckingOnMeds(),
+        new DoResearch(),
+        new Socialize(),
+        new DoExperiments(),
+        new SecurityCheck(),
+        new ShieldMaintenance(),
+        new RationsCheckUp()
     ];
     public List<Action> AvailableActions { get; private set; } = new List<Action>();
 
