@@ -6,6 +6,11 @@ public class LookCommand : SimpleCommand {
     }
 
     public override void Run(GameState state) {
-        Console.WriteLine(state.CurrentRoom.GetDescription());
+        foreach (KeyValuePair<Direction, Room> kvp in state.CurrentRoom.Exits) {
+            Direction direction = kvp.Key;
+            Room room = kvp.Value;
+
+            Console.WriteLine("On the " + direction + ": " + room.GetName());
+        }
     }
 }
