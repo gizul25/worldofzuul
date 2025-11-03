@@ -1,4 +1,4 @@
-using Aqueous;
+namespace Aqueous;
 
 public class DoCommand : Command {
     public override bool TryExecute(string input, GameState state) {
@@ -21,12 +21,12 @@ public class DoCommand : Command {
             return false;
         }
 
-        Aqueous.Action action = state.actionManager.AvailableActions[index];
+        Action action = state.actionManager.AvailableActions[index];
         Run(state, action);
         return true;
     }
 
-    public void Run(GameState state, Aqueous.Action action) {
+    public void Run(GameState state, Action action) {
         action.Perform(state);
     }
 }

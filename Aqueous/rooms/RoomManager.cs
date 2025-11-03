@@ -1,4 +1,4 @@
-using Aqueous;
+namespace Aqueous;
 
 public class RoomManager {
     public static Room CreateRooms() {

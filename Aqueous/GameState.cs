@@ -1,4 +1,4 @@
-using Aqueous;
+namespace Aqueous;
 
 public class GameState {
     public Room CurrentRoom { get; set; }

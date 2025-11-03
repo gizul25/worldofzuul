@@ -1,4 +1,4 @@
-using Aqueous;
+namespace Aqueous;
 
 public class ItemManager {
     public List<IItem> Items { get; private set; } = new();

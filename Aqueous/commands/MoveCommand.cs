@@ -1,4 +1,4 @@
-using Aqueous;
+namespace Aqueous;
 
 public class MoveCommand : Command {
     public override bool TryExecute(string input, GameState state) {

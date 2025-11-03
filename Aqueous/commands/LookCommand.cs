@@ -1,4 +1,4 @@
-using Aqueous;
+namespace Aqueous;
 
 public class LookCommand : SimpleCommand {
     public override string GetName() {

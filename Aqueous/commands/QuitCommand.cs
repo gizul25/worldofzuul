@@ -1,4 +1,4 @@
-using Aqueous;
+namespace Aqueous;
 
 public class QuitCommand : SimpleCommand {
     public override string GetName() {

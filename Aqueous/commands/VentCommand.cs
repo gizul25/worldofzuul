@@ -1,4 +1,4 @@
-using Aqueous;
+namespace Aqueous;
 
 public class VentCommand : SimpleCommand {
     public override string GetName() {

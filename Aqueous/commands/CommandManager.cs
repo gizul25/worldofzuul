@@ -1,4 +1,4 @@
-using Aqueous;
+namespace Aqueous;
 
 public class CommandManager {
     private static Command[] commands = [
