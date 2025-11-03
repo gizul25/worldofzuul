@@ -15,7 +15,9 @@ public class HelpCommand : SimpleCommand {
         Console.WriteLine();
         Console.WriteLine("Navigate by typing 'north', 'south', 'east', or 'west'.");
         Console.WriteLine("Type 'look' for more details.");
+        Console.WriteLine("Type 'vent' to vent in some of the rooms.");
         Console.WriteLine("Type 'actions' to get actions available in the room.");
+        Console.WriteLine("Type 'items' to list items in your inventory.");
         Console.WriteLine("Type 'help' to print this message again.");
         Console.WriteLine("Type 'quit' to exit the game.");
     }
