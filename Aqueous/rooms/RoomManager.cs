@@ -41,6 +41,7 @@ public class RoomManager {
         reactor.SetExits(upperEngine, null, lowerEngine, coolingSystem);
         coolingSystem.SetExits(null, reactor, null, null);
 
+        cafeteria.SetVent(electrical);
 
         return crewCabin;
     }

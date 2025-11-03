@@ -7,7 +7,8 @@ public class CommandManager {
         new MoveCommand(),
         new QuitCommand(),
         new ActionsCommand(),
-        new DoCommand()
+        new DoCommand(),
+        new VentCommand()
     ];
     
     public static bool Run(GameState state) {

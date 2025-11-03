@@ -3,6 +3,7 @@
     public class Room
     {
         public Dictionary<Direction, Room> Exits { get; private set; } = new();
+        public Room? Vent { get; private set; }
 
         public virtual string GetName() {
             return "unimplemented";
@@ -27,6 +28,10 @@
                 return;
             }
             Exits[direction] = neighbor;
+        }
+
+        public void SetVent(Room? ventExit) {
+            Vent = ventExit;
         }
     }
 }
