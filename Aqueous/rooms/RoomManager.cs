@@ -42,6 +42,31 @@ public class RoomManager {
         coolingSystem.SetExits(null, reactor, null, null);
 
         cafeteria.SetVent(electrical);
+        electrical.SetVent(cafeteria);
+
+        crewCabin.SetVent(primaryResearch);
+        primaryResearch.SetVent(crewCabin);
+
+        medBay.SetVent(storage);
+        storage.SetVent(medBay);
+
+        sleepingQuarters.SetVent(emergencyEscape);
+        emergencyEscape.SetVent(sleepingQuarters);
+
+        reactor.SetVent(security);
+        security.SetVent(reactor);
+
+        shields.SetVent(communications);
+        communications.SetVent(shields);
+
+        delivery.SetVent(lowerEngine);
+        lowerEngine.SetVent(delivery);
+
+        upperEngine.SetVent(coolingSystem);
+        coolingSystem.SetVent(upperEngine);
+
+        elevator.SetVent(mainLab);
+        mainLab.SetVent(elevator);
 
         return crewCabin;
     }
