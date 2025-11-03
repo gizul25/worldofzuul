@@ -6,6 +6,8 @@ public class PrimaryResearch : Room{
     }
     
     public override string GetDescription() {
-        return "This is the primary research";
+        return @"You see many isolated reservoir tanks. 
+    There is certain equipment lying all around. 
+    You don't seem to question it.";
     }
 }
