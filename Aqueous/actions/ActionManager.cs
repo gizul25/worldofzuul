@@ -27,7 +27,7 @@ public class ActionManager {
     public List<Action> GetCurrentQuestActions(GameState state) {
         List<Action> actions = new List<Action>();
         foreach (Action action in allActions) {
-            if (!action.CanPerform(state)) {
+            if (!action.IsActive(state)) {
                 continue;
             }
             if (action.GetQuestType() == null) {

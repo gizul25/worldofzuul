@@ -5,23 +5,27 @@ public class SecurityCheck : OneTimeAction {
         return "Security check";
     }
 
-    public override bool CanPerform(GameState state) {
-        if (!base.CanPerform(state)) {
+    public override Type GetRoom() {
+        return typeof(Security);
+    }
+
+    public override Type? GetQuestType() {
+        return typeof(MainStoryline);
+    }
+
+    public override bool IsActive(GameState state) {
+        if (!base.IsActive(state)) {
             return false;
         }
         if (!state.itemManager.HasItem<SecurityKey>()) {
             return false;
         }
-        return state.CurrentRoom is Security;
+        return true;
     }
 
     public override void Perform(GameState state) {
         base.Perform(state);
         state.itemManager.ConsumeItem<SecurityKey>();
         Console.WriteLine("Security check up....");
-    }
-
-    public override Type? GetQuestType() {
-        return typeof(MainStoryline);
     }
 }
