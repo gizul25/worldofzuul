@@ -11,5 +11,6 @@ public class ShieldMaintenance : Action {
 
     public override void Perform(GameState state) {
         Console.WriteLine("Maintaining shields....");
+        state.itemManager.AddItem(new CoolingKey());
     }
 }

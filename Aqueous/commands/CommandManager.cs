@@ -8,10 +8,12 @@ public class CommandManager {
         new QuitCommand(),
         new ActionsCommand(),
         new DoCommand(),
-        new VentCommand()
+        new VentCommand(),
+        new ItemsCommand()
     ];
     
     public static bool Run(GameState state) {
+        Console.WriteLine("");
         Console.WriteLine(state.CurrentRoom.GetDescription());
         Console.Write("> ");
 
