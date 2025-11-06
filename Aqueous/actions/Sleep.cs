@@ -5,8 +5,8 @@ public class Sleep : Action {
         return "Get rest";
     }
 
-    public override bool CanPerform(GameState state) {
-        return state.CurrentRoom is SleepingQuarters;
+    public override Type GetRoom() {
+        return typeof(SleepingQuarters);
     }
 
     public override void Perform(GameState state) {

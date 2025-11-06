@@ -5,8 +5,8 @@ public class DoResearch : Action {
         return "Do research";
     }
 
-    public override bool CanPerform(GameState state) {
-        return state.CurrentRoom is PrimaryResearch;
+    public override Type GetRoom() {
+        return typeof(PrimaryResearch);
     }
 
     public override void Perform(GameState state) {

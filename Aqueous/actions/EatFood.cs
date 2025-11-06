@@ -5,8 +5,8 @@ public class EatFood : Action {
         return "Eat food";
     }
 
-    public override bool CanPerform(GameState state) {
-        return state.CurrentRoom is Cafeteria;
+    public override Type GetRoom() {
+        return typeof(Cafeteria);
     }
 
     public override void Perform(GameState state) {

@@ -5,8 +5,8 @@ public class FixWiringAction : Action {
         return "Fix wiring";
     }
 
-    public override bool CanPerform(GameState state) {
-        return state.CurrentRoom is Electrical;
+    public override Type GetRoom() {
+        return typeof(Electrical);
     }
 
     public override void Perform(GameState state) {

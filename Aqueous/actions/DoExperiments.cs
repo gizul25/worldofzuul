@@ -5,8 +5,8 @@ public class DoExperiments : Action {
         return "Experiment";
     }
 
-    public override bool CanPerform(GameState state) {
-        return state.CurrentRoom is MainLab;
+    public override Type GetRoom() {
+        return typeof(MainLab);
     }
 
     public override void Perform(GameState state) {
