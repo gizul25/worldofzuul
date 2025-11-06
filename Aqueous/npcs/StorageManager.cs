@@ -5,7 +5,12 @@ public class StorageManager : NPC {
         return "Larry";
     }
 
-    public override string GetJobTitle() {
+    public override string GetJobTitle()
+    {
         return "Storage manager";
+    }
+    
+    public override Type GetRoom() {
+        return typeof(Storage);
     }
 }

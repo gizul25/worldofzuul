@@ -6,7 +6,12 @@ public class Overseer : NPC
         return "Slobodan";
     }
 
-    public override string GetJobTitle() {
+    public override string GetJobTitle()
+    {
         return "Overseer";
+    }
+    
+    public override Type GetRoom() {
+        return typeof(PrimaryResearch);
     }
 }

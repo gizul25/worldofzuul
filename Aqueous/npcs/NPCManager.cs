@@ -2,8 +2,21 @@ namespace Aqueous;
 
 public class NPCManager {
     private static NPC[] npcs = [
-        // TODO: fill it in
+        new CommunicationOfficer(),
+        new Doctor(),
+        new Electrician(),
+        new Janitor(),
+        new MarineMedic(),
+        new Mechanic(),
+        new Overseer(),
         new SecurityGuard(),
+        new SeniorLabManager(),
+        new SickResearcher(),
+        new SoftwareEngineer(),
+        new StationCook(),
+        new StationCat(),
+        new StationBiologist(),
+        new StorageManager()
     ];
 
     public List<NPC> GetRoomNPCs(Room room) {

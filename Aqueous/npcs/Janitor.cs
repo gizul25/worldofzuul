@@ -5,7 +5,12 @@ public class Janitor : NPC {
         return "Patrick";
     }
 
-    public override string GetJobTitle() {
+    public override string GetJobTitle()
+    {
         return "Janitor";
+    }
+    
+    public override Type GetRoom() {
+        return typeof(SleepingQuarters);
     }
 }

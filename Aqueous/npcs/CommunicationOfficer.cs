@@ -5,7 +5,12 @@ public class CommunicationOfficer : NPC {
         return "Barton";
     }
 
-    public override string GetJobTitle() {
+    public override string GetJobTitle()
+    {
         return "Communication's officer";
+    }
+    
+    public override Type GetRoom() {
+        return typeof(Communications);
     }
 }

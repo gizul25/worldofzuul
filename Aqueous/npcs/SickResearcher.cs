@@ -6,7 +6,12 @@ public class SickResearcher : NPC
         return "Steve";
     }
 
-    public override string GetJobTitle() {
+    public override string GetJobTitle()
+    {
         return "Researcher";
+    }
+    
+    public override Type GetRoom() {
+        return typeof(MedBay);
     }
 }

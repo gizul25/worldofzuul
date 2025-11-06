@@ -5,7 +5,12 @@ public class Mechanic : NPC {
         return "Mike";
     }
 
-    public override string GetJobTitle() {
+    public override string GetJobTitle()
+    {
         return "Mechanic";
+    }
+    
+    public override Type GetRoom() {
+        return typeof(Reactor);
     }
 }

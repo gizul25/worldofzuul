@@ -11,7 +11,10 @@ public class SecurityGuard : NPC
         return "Security Guard";
     }
 
-    public override Type GetRoom() {
+    public override Type GetRoom()
+    {
         return typeof(Security);
     }
+    
+    
 }

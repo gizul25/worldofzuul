@@ -11,4 +11,8 @@ public class Electrician : NPC
         return "Electrician";
     }
 
+    public override Type GetRoom() {
+        return typeof(Electrical);
+    }
+
 }

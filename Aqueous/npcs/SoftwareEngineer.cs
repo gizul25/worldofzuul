@@ -5,7 +5,12 @@ public class SoftwareEngineer : NPC {
         return "Bob";
     }
 
-    public override string GetJobTitle() {
-        return "SoftwareEngineer";
+    public override string GetJobTitle()
+    {
+        return "Software Engineer";
+    }
+    
+    public override Type GetRoom() {
+        return typeof(Security); 
     }
 }

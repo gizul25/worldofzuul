@@ -5,7 +5,12 @@ public class StationCook : NPC {
         return "Joey";
     }
 
-    public override string GetJobTitle() {
+    public override string GetJobTitle()
+    {
         return "Station cook";
+    }
+    
+    public override Type GetRoom() {
+        return typeof(Cafeteria);
     }
 }

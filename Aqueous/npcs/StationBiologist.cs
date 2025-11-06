@@ -11,4 +11,8 @@ public class StationBiologist : NPC
     {
         return "Station Biologist";
     }
+
+    public override Type GetRoom() {
+        return typeof(PrimaryResearch);
+    }
 }

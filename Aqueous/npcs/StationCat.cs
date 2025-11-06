@@ -5,7 +5,12 @@ public class StationCat : NPC {
         return "Leonardo DiCarpio";
     }
 
-    public override string GetJobTitle() {
+    public override string GetJobTitle()
+    {
         return "Station Cat";
+    }
+    
+    public override Type GetRoom() {
+        return typeof(SleepingQuarters);
     }
 }
