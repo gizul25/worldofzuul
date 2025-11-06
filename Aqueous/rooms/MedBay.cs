@@ -6,6 +6,7 @@ public class MedBay : Room {
     }
 
     public override string GetDescription() {
-        return "This is the station's Med Bay";
+        return @"The only place in the station focused on something else than endless research and survival. 
+The doctor, Bruce, makes sure no one dies. And the job proves harder than it should be…";
     }
 }

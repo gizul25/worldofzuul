@@ -7,6 +7,7 @@ public class LowerEngine : Room
     }
 
     public override string GetDescription() {
-        return "This is a lower engine";
+        return @"One of the engines, not much different from the other one. 
+They keep the station stable and you make sure the engines are stable. Do your job well or there will be consequences...";
     }
 }

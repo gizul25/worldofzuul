@@ -7,7 +7,7 @@ public class PrimaryResearch : Room{
     
     public override string GetDescription() {
         return @"You see many isolated reservoir tanks. 
-    There is certain equipment lying all around. 
-    You don't seem to question it.";
+There is certain equipment lying all around. 
+You don't seem to question it. Let the lab rats do their job.";
     }
 }

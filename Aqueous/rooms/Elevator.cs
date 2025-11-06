@@ -6,6 +6,7 @@ public class Elevator : Room {
     }
 
     public override string GetDescription() {
-        return "This is the elevator ";
+        return @"The elevator, the only thing connecting the station to the surface. 
+Very few get to use it and you sometimes wonder what they do up there…";
     }
 }

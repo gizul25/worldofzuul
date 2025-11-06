@@ -7,6 +7,8 @@ public class Reactor : Room
     }
 
     public override string GetDescription() {
-        return "This is Reactor";
+        return @"The most fragile place on the station. 
+A massive reactor stands in the middle, away from anything that could disrupt its peace. 
+It’s probably better not to touch it unless absolutely necessary.";
     }
 }

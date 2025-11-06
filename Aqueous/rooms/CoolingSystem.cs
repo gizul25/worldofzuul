@@ -6,6 +6,7 @@ public class CoolingSystem : Room {
     }
 
     public override string GetDescription() {
-        return "This is a Cooling system";
+        return @"The cooling system, crucial for the reactors maintenance, crucial for the station’s survival. 
+The temperature must be stable at all times. Always.";
     }
 }

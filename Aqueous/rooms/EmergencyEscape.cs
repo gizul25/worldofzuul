@@ -7,6 +7,7 @@ public class EmergencyExit : Room
     }
     public override string GetDescription()
     {
-        return "This is an Emergency Exit";
+        return @"The emergency escape – the plan B in case everything goes to hell. 
+You pray you will never have to use it…";
     }
 }

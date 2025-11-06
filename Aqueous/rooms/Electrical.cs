@@ -6,6 +6,8 @@ public class Electrical : Room {
     }
 
     public override string GetDescription() {
-        return "This is a Electrical";
+        return @"The walls are covered in wires and sensors. 
+You see a hunched man working in the corner. 
+It’s Joseph the electrician, better not disturb him.";
     }
 }
