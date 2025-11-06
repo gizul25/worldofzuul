@@ -20,4 +20,8 @@ public class SecurityCheck : OneTimeAction {
         state.itemManager.ConsumeItem<SecurityKey>();
         Console.WriteLine("Security check up....");
     }
+
+    public override Type? GetQuestType() {
+        return typeof(MainStoryline);
+    }
 }

@@ -14,4 +14,8 @@ public class ShieldMaintenance : Action {
         Console.WriteLine("For your hard work, now you get a security key!");
         state.itemManager.AddItem(new SecurityKey());
     }
+
+    public override Type? GetQuestType() {
+        return typeof(MainStoryline);
+    }
 }
