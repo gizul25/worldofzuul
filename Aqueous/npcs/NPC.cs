@@ -8,4 +8,8 @@ public class NPC {
     public virtual string GetJobTitle() {
         return "unimplemented";
     }
+
+    public virtual Type GetRoom() {
+        return typeof(Room);
+    }
 }
