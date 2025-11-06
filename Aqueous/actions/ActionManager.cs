@@ -15,6 +15,29 @@ public class ActionManager {
     ];
     public List<Action> AvailableActions { get; private set; } = new List<Action>();
 
+    // public T GetAction<T>() {
+    //     foreach(Action action in allActions) {
+    //         if (action is T) {
+    //             return (T)action;
+    //         }
+    //     }
+    //     throw new Exception("Action not found.");
+    // }
+
+    public List<Action> GetCurrentQuestActions(GameState state) {
+        List<Action> actions = new List<Action>();
+        foreach (Action action in allActions) {
+            if (!action.IsActive(state)) {
+                continue;
+            }
+            if (action.GetQuestType() == null) {
+                continue;
+            }
+            actions.Add(action);
+        }
+        return actions;
+    }
+
     public void UpdateAvailableActions(GameState state) {
         AvailableActions.Clear();
         foreach (Action action in allActions) {

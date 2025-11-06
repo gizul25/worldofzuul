@@ -5,8 +5,8 @@ public class CheckingOnMeds : Action {
         return "Check on medical equipment";
     }
 
-    public override bool CanPerform(GameState state) {
-        return state.CurrentRoom is MedBay;
+    public override Type GetRoom() {
+        return typeof(MedBay);
     }
 
     public override void Perform(GameState state) {

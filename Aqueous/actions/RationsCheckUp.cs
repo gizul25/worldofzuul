@@ -5,8 +5,8 @@ public class RationsCheckUp : Action {
         return "Check on rations";
     }
 
-    public override bool CanPerform(GameState state) {
-        return state.CurrentRoom is Storage;
+    public override Type GetRoom() {
+        return typeof(Storage);
     }
 
     public override void Perform(GameState state) {

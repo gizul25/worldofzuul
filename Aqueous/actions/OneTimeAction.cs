@@ -3,7 +3,7 @@ namespace Aqueous;
 public class OneTimeAction : Action {
     private bool isCompleted = false;
 
-    public override bool CanPerform(GameState state) {
+    public override bool IsActive(GameState state) {
         if (isCompleted) {
             return false;
         }

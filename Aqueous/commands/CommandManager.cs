@@ -9,7 +9,8 @@ public class CommandManager {
         new ActionsCommand(),
         new DoCommand(),
         new VentCommand(),
-        new ItemsCommand()
+        new ItemsCommand(),
+        new QuestsCommand()
     ];
     
     public static bool Run(GameState state) {

@@ -6,6 +6,7 @@ public class GameState {
     public ActionManager actionManager = new ActionManager();
     public ItemManager itemManager = new ItemManager();
     public NPCManager npcManager = new NPCManager();
+    public QuestManager questManager = new QuestManager();
 
     public GameState(Room currentRoom) {
         this.CurrentRoom = currentRoom;
