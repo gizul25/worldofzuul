@@ -16,7 +16,7 @@ public class CheckingOnMeds : Action {
 
     public override void Perform(GameState state) {
         base.Perform(state);
-        Disable();
+        Complete();
         Console.WriteLine("Checking on medical equipment....");
         
     }

@@ -16,7 +16,7 @@ public class DoResearch : Action {
 
     public override void Perform(GameState state) {
         base.Perform(state);
-        Disable();
+        Complete();
         Console.WriteLine("Doing research....");
     }
 }

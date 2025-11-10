@@ -52,7 +52,7 @@ public class DoExperiments : Action {
             if (array.SequenceEqual(validAnswer))
             {
                 Console.WriteLine("Good job. Maybe I should take advantage of you more often.");
-                Disable();
+                Complete();
                 break;
             }
             else

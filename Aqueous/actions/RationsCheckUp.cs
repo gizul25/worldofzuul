@@ -15,6 +15,8 @@ public class RationsCheckUp : Action {
     }
 
     public override void Perform(GameState state) {
+        base.Perform(state);
+        Complete();
         Console.WriteLine("Checking up on rations....");
     }
 }
