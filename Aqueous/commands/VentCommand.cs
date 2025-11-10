@@ -9,7 +9,8 @@ public class VentCommand : SimpleCommand {
         if (state.CurrentRoom.Vent != null) {
             string ventExitRoomName = state.CurrentRoom.Vent.GetName();
             Console.WriteLine("Venting to " + ventExitRoomName);
-            state.CurrentRoom = state.CurrentRoom.Vent;
+            Console.WriteLine("");
+            state.MoveToRoom(state.CurrentRoom.Vent);
         } else {
             Console.WriteLine("No vent in this room");
         }

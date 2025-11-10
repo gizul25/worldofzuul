@@ -2,8 +2,9 @@ namespace Aqueous;
 
 /// Stores all changing parts of the game
 public class GameState {
-    public Room CurrentRoom;
+    public Room CurrentRoom { get; private set; }
     public bool ShouldExit = false;
+    public bool IsJustEnteredRoom = true;
     public RoomManager roomManager { get; private set; } = new RoomManager();
     public ActionManager actionManager { get; private set; } = new ActionManager();
     public ItemManager itemManager { get; private set; } = new ItemManager();
@@ -12,5 +13,10 @@ public class GameState {
 
     public GameState() {
         this.CurrentRoom = roomManager.GetStartingRoom();
+    }
+
+    public void MoveToRoom(Room room) {
+        CurrentRoom = room;
+        IsJustEnteredRoom = true;
     }
 }
