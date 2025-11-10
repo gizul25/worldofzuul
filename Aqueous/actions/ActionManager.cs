@@ -1,3 +1,5 @@
+using System.Security;
+
 namespace Aqueous;
 
 public class ActionManager {
@@ -17,7 +19,9 @@ public class ActionManager {
         new RatTrapDelivery(),
         new RatTrapShields(),
         new RatTrapCoolingSystem(),
-        new RatTrapCrewCabin()
+        new RatTrapCrewCabin(),
+        new PetCat(),
+        new TalkToJoey(),
     ];
     public List<Action> AvailableActions { get; private set; } = new List<Action>();
 
