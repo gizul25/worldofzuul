@@ -22,7 +22,8 @@ public class ActionManager {
         new TalkToJoey(),
         new TalkToJoey2(),
         new TalkToSteve(),
-        new FeedTheCat()
+        new FeedTheCat(),
+        new TalkToViktor(),
     ];
     public List<Action> AvailableActions { get; private set; } = new List<Action>();
 
