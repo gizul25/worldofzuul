@@ -3,6 +3,7 @@ namespace Aqueous;
 public class QuestManager {
     static IQuest[] allQuests = [
         new MainStoryline(),
+        new SideQuests(),
     ];
     
     public IQuest GetQuest(Type type) {

@@ -5,11 +5,19 @@ public class Sleep : Action {
         return "Get rest";
     }
 
-    public override Type GetRoom() {
+    public override Type GetRoom()
+    {
         return typeof(SleepingQuarters);
+    }
+    
+    public override Type? GetQuestType()
+    {
+        return typeof(SideQuests);
     }
 
     public override void Perform(GameState state) {
+        base.Perform(state);
+        Disable();
         Console.WriteLine("Sleeping....");
     }
 }
