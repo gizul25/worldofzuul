@@ -8,6 +8,7 @@ public enum Direction {
 }
 
 public class DirectionHelper {
+    /// Converts directions strings (case-sensitive) to Direction enum
     public static Direction DirectionFromString(string direction) {
         switch (direction) {
             case "north":

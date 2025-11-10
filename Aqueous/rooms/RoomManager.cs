@@ -1,6 +1,7 @@
 namespace Aqueous;
 
 public class RoomManager {
+    /// Initializes rooms, their links and vents. Returns starting room.
     public static Room CreateRooms() {
         Room crewCabin = new CrewCabin();
         Room cafeteria = new Cafeteria();

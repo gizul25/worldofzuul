@@ -80,6 +80,7 @@ namespace Aqueous
 {
     public class Program
     {
+        /// Main entry point of the game
         public static void Main()
         {
             Game game = new();

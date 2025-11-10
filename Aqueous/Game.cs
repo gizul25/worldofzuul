@@ -4,12 +4,14 @@
     {
         private GameState state;
 
+        /// Initializes rooms and game state
         public Game()
         {
             Room startingRoom = RoomManager.CreateRooms();
             state = new GameState(startingRoom);
         }
 
+        /// Prints welcome and starts game loop.
         public void Play()
         {
             PrintWelcome();
@@ -21,6 +23,7 @@
             Console.WriteLine("Thank you for playing Aqueous!");
         }
 
+        /// Prints introductory message at the start of the game
         private static void PrintWelcome()
         {
             Console.WriteLine("Welcome to the Aqueous!");
