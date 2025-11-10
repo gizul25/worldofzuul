@@ -30,7 +30,7 @@ public class FeedTheCat : Action {
 
     public override void Perform(GameState state) {
         base.Perform(state);
-        Disable();
+        Complete();
         state.itemManager.ConsumeItem<Leftovers>();
         Console.WriteLine("Good job, you got the ball of fluff to like you more. Beware of jealous researchers...");
     }

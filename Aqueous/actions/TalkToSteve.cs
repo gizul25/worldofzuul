@@ -19,7 +19,7 @@ public class TalkToSteve : Action {
 
     public override void Perform(GameState state) {
         base.Perform(state);
-        Disable();
+        Complete();
         state.actionManager.GetAction<FeedMickey>().Enable();
         Console.WriteLine("Steve:“Hey, my man! See, I'm very sick, have a terrible headache and everything, I don't think I can do my part today. You can do the works, right? Thanks, I owe you big time!”");
     }

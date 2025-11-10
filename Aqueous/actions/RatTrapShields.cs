@@ -20,7 +20,7 @@ public class RatTrapShields : Action {
 
     public override void Perform(GameState state) {
         base.Perform(state);
-        Disable();
+        Complete();
         Console.WriteLine("Placing traps in shields...");
         
         RatTrapStorage ratTrapStorage = (RatTrapStorage)

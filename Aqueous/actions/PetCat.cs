@@ -15,7 +15,7 @@ public class PetCat : Action {
 
     public override void Perform(GameState state) {
         base.Perform(state);
-        Disable();
+        Complete();
         Console.WriteLine("Petting Leonardo...");
     }
 }

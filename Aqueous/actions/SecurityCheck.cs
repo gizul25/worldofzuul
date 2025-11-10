@@ -29,7 +29,7 @@ public class SecurityCheck : Action {
 
     public override void Perform(GameState state) {
         base.Perform(state);
-        Disable();
+        Complete();
         state.itemManager.ConsumeItem<SecurityKey>();
         Console.WriteLine("Security check up....");
     }

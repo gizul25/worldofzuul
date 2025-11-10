@@ -20,7 +20,7 @@ public class RatTrapCoolingSystem : Action {
 
     public override void Perform(GameState state) {
         base.Perform(state);
-        Disable();
+        Complete();
         Console.WriteLine("Placing traps in cooling system...");
         
         RatTrapStorage ratTrapStorage = (RatTrapStorage)

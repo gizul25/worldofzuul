@@ -1,11 +1,10 @@
 namespace Aqueous;
 
 public class Sleep : Action {
-    public Sleep()
-    {
+    public Sleep() {
         Enable();
     }
-    
+
     public override string GetName() {
         return "Get rest";
     }
@@ -24,5 +23,6 @@ public class Sleep : Action {
         base.Perform(state);
         Disable();
         Console.WriteLine("Sleeping....");
+        state.EndGame();
     }
 }

@@ -5,6 +5,9 @@ public class Action {
     /// place. Used to enable/disable new actions after completing some of them.
     private bool isEnabled = false;
     
+    /// Used for different endings
+    public bool IsCompleted { get; private set; } = false;
+    
     /// Returns display name of the action
     public virtual string GetName() {
         return "unimplemented";
@@ -49,6 +52,13 @@ public class Action {
     /// multiple times. Generally should be called from `Perform()`.
     public void Disable() {
         isEnabled = false;
+    }
+
+    /// Used to mark this action as completed. Separate from disable for multiple
+    /// part actions.
+    public void Complete() {
+        Complete();
+        IsCompleted = true;
     }
 
     /// A function which is called to execute the action when it is guaranteed

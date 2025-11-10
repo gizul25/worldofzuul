@@ -19,7 +19,7 @@ public class ShieldMaintenance : Action {
 
     public override void Perform(GameState state) {
         base.Perform(state);
-        Disable();
+        Complete();
         Console.WriteLine("Maintaining shields....");
         Console.WriteLine("For your hard work, now you get a security key!");
         state.itemManager.AddItem(new SecurityKey());

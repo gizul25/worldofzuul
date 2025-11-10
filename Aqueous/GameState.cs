@@ -19,4 +19,15 @@ public class GameState {
         CurrentRoom = room;
         IsJustEnteredRoom = true;
     }
+
+    public void EndGame() {
+        RatTrapStorage ratAction = (RatTrapStorage)actionManager.GetAction<RatTrapStorage>();
+        if (ratAction.IsCompleted) {
+            Console.WriteLine("You restored the underwater research station back to its former glory. Thank you!");
+        } else {
+            Console.WriteLine("You went to sleep but rats ate the last bit of underwater protection.");
+        }
+
+        ShouldExit = true;
+    }
 }
