@@ -4,6 +4,7 @@ public class PetCat : Action {
     public PetCat() {
         Enable();
     }
+    
     public override string GetName() {
         return "Pet the Cat";
     }
@@ -13,6 +14,8 @@ public class PetCat : Action {
     }
 
     public override void Perform(GameState state) {
+        base.Perform(state);
+        Disable();
         Console.WriteLine("Petting Leonardo...");
     }
 }

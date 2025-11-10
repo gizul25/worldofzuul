@@ -1,14 +1,18 @@
 namespace Aqueous;
 
-public class FixWiringAction : Action {
+public class TalkToSteve : Action {
+    public TalkToSteve() {
+        Enable();
+    }
+
     public override string GetName() {
-        return "Fix wiring";
+        return "Talk to Steve";
     }
 
     public override Type GetRoom() {
-        return typeof(Electrical);
+        return typeof(MedBay);
     }
-
+    
     public override Type? GetQuestType() {
         return typeof(MainStoryline);
     }
@@ -16,8 +20,8 @@ public class FixWiringAction : Action {
     public override void Perform(GameState state) {
         base.Perform(state);
         Disable();
+        state.actionManager.GetAction<FeedMickey>().Enable();
         // TODO: add dialogue
-        Console.WriteLine("Fixing wires....");
-        state.actionManager.GetAction<TalkToJoey2>().Enable();
+        Console.WriteLine("");
     }
 }

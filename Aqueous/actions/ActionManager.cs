@@ -1,5 +1,3 @@
-using System.Security;
-
 namespace Aqueous;
 
 public class ActionManager {
@@ -27,7 +25,7 @@ public class ActionManager {
     public List<Action> AvailableActions { get; private set; } = new List<Action>();
 
     public Action GetAction<T>() {
-        foreach(Action action in allActions) {
+        foreach (Action action in allActions) {
             if (action is T) {
                 return action;
             }
