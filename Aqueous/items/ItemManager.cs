@@ -8,7 +8,7 @@ public class ItemManager {
     }
 
     public T FindItem<T>() {
-        foreach(IItem item in Items) {
+        foreach (IItem item in Items) {
             if (item is T) {
                 return (T)item;
             }
@@ -17,7 +17,7 @@ public class ItemManager {
     }
 
     public bool HasItem<T>() {
-        foreach(IItem item in Items) {
+        foreach (IItem item in Items) {
             if (item is T) {
                 return true;
             }
