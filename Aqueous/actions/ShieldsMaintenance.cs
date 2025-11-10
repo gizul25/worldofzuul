@@ -1,6 +1,10 @@
 namespace Aqueous;
 
 public class ShieldMaintenance : Action {
+    public ShieldMaintenance() {
+        Enable();
+    }
+
     public override string GetName() {
         return "Maintain shields";
     }

@@ -1,6 +1,10 @@
 namespace Aqueous;
 
 public class SecurityCheck : Action {
+    public SecurityCheck() {
+        Enable();
+    }
+
     public override string GetName() {
         return "Security check";
     }

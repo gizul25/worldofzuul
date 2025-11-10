@@ -14,12 +14,7 @@ public class ActionManager {
         new RationsCheckUp()
     ];
     public List<Action> AvailableActions { get; private set; } = new List<Action>();
-
-    public ActionManager() {
-        GetAction<SecurityCheck>().Enable();
-        GetAction<ShieldMaintenance>().Enable();
-    }
-
+    
     public Action GetAction<T>() {
         foreach(Action action in allActions) {
             if (action is T) {
