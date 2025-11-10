@@ -20,6 +20,8 @@ public class ActionManager {
         new RatTrapCrewCabin(),
         new PetCat(),
         new TalkToJoey(),
+        new TalkToJoey2(),
+        new TalkToSteve(),
         new FeedTheCat()
     ];
     public List<Action> AvailableActions { get; private set; } = new List<Action>();
