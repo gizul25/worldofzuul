@@ -11,10 +11,15 @@ public class ActionManager {
         new DoExperiments(),
         new SecurityCheck(),
         new ShieldMaintenance(),
-        new RationsCheckUp()
+        new RationsCheckUp(),
+        new RatTrapStorage(),
+        new RatTrapDelivery(),
+        new RatTrapShields(),
+        new RatTrapCoolingSystem(),
+        new RatTrapCrewCabin()
     ];
     public List<Action> AvailableActions { get; private set; } = new List<Action>();
-    
+
     public Action GetAction<T>() {
         foreach(Action action in allActions) {
             if (action is T) {
