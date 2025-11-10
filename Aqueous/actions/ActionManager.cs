@@ -15,14 +15,19 @@ public class ActionManager {
     ];
     public List<Action> AvailableActions { get; private set; } = new List<Action>();
 
-    // public T GetAction<T>() {
-    //     foreach(Action action in allActions) {
-    //         if (action is T) {
-    //             return (T)action;
-    //         }
-    //     }
-    //     throw new Exception("Action not found.");
-    // }
+    public ActionManager() {
+        GetAction<SecurityCheck>().Enable();
+        GetAction<ShieldMaintenance>().Enable();
+    }
+
+    public Action GetAction<T>() {
+        foreach(Action action in allActions) {
+            if (action is T) {
+                return action;
+            }
+        }
+        throw new Exception("Action not found.");
+    }
 
     public List<Action> GetCurrentQuestActions(GameState state) {
         List<Action> actions = new List<Action>();

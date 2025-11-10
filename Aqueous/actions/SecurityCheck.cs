@@ -1,6 +1,6 @@
 namespace Aqueous;
 
-public class SecurityCheck : OneTimeAction {
+public class SecurityCheck : Action {
     public override string GetName() {
         return "Security check";
     }
@@ -25,6 +25,7 @@ public class SecurityCheck : OneTimeAction {
 
     public override void Perform(GameState state) {
         base.Perform(state);
+        Disable();
         state.itemManager.ConsumeItem<SecurityKey>();
         Console.WriteLine("Security check up....");
     }

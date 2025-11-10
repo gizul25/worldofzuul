@@ -1,6 +1,8 @@
 namespace Aqueous;
 
 public class Action {
+    private bool isEnabled = false;
+    
     public virtual string GetName() {
         return "unimplemented";
     }
@@ -22,7 +24,15 @@ public class Action {
 
     // If the action could be performed if player would be in the room
     public virtual bool IsActive(GameState state) {
-        return true;
+        return isEnabled;
+    }
+
+    public void Enable() {
+        isEnabled = true;
+    }
+
+    public void Disable() {
+        isEnabled = false;
     }
 
     public virtual void Perform(GameState state) {}

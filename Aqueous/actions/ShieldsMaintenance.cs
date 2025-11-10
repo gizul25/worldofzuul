@@ -1,6 +1,6 @@
 namespace Aqueous;
 
-public class ShieldMaintenance : OneTimeAction {
+public class ShieldMaintenance : Action {
     public override string GetName() {
         return "Maintain shields";
     }
@@ -15,6 +15,7 @@ public class ShieldMaintenance : OneTimeAction {
 
     public override void Perform(GameState state) {
         base.Perform(state);
+        Disable();
         Console.WriteLine("Maintaining shields....");
         Console.WriteLine("For your hard work, now you get a security key!");
         state.itemManager.AddItem(new SecurityKey());
