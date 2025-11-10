@@ -7,10 +7,28 @@ public class MapCommand : SimpleCommand {
 
     public override void Run(GameState state) {
         string map = @"
-Cooling system ----Reactor
+                                                       Crew Cabin --- Elevator
+                                                       (Entrance)
+                                                           |
+                           Security                        |
+                              |                            |
+                              |                            |      
+                      -----  Upper  ---  MedBay ----- Cafeteria --------
+                      |      Engine                        |           |
+                      |       |                            |           |
+                      |       |                            |           |
+Cooling system ----Reactor    |                        Sleeping     Primary
+                      |       |                        quarters     Research
+                      |       |                            |
+                      |       |                            | 
+                      ----  Lower   --------- Storage---  Main --- Shields
+                            Engine               |        Lab         |
+                              |                  |         |          |
+                              |               Delivery     |      Emergency 
+                          Electrical                       |        Escape
+                                                           |
+                                                    Communications
 
-
-more map here
 ";
         Console.Write(map);
     }
