@@ -2,14 +2,7 @@
 {
     public class Game
     {
-        private GameState state;
-
-        /// Initializes rooms and game state
-        public Game()
-        {
-            Room startingRoom = RoomManager.CreateRooms();
-            state = new GameState(startingRoom);
-        }
+        private GameState state = new GameState();
 
         /// Prints welcome and starts game loop.
         public void Play()

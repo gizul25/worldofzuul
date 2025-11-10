@@ -23,8 +23,10 @@ public class QuestsCommand : SimpleCommand {
             if (quest == null) {
                 continue;
             }
-            // TODO: consider adding room location
-            Console.WriteLine($"{quest.GetName()} - {action.GetName()}");
+
+            Room room = state.roomManager.GetRoom(action.GetRoom());
+
+            Console.WriteLine($"{quest.GetName()} - {action.GetName()} [{room.GetName()}]");
         }
     }
 }

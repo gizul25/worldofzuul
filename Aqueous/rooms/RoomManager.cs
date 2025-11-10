@@ -1,8 +1,10 @@
 namespace Aqueous;
 
 public class RoomManager {
+    List<Room> rooms = new List<Room>();
+
     /// Initializes rooms, their links and vents. Returns starting room.
-    public static Room CreateRooms() {
+    public RoomManager() {
         Room crewCabin = new CrewCabin();
         Room cafeteria = new Cafeteria();
         Room elevator = new Elevator();
@@ -69,6 +71,36 @@ public class RoomManager {
         elevator.SetVent(mainLab);
         mainLab.SetVent(elevator);
 
-        return crewCabin;
+        rooms.Add(crewCabin);
+        rooms.Add(cafeteria);
+        rooms.Add(elevator);
+        rooms.Add(medBay);
+        rooms.Add(primaryResearch);
+        rooms.Add(sleepingQuarters);
+        rooms.Add(mainLab);
+        rooms.Add(upperEngine);
+        rooms.Add(lowerEngine);
+        rooms.Add(reactor);
+        rooms.Add(security);
+        rooms.Add(coolingSystem);
+        rooms.Add(electrical);
+        rooms.Add(storage);
+        rooms.Add(delivery);
+        rooms.Add(communications);
+        rooms.Add(shields);
+        rooms.Add(emergencyEscape);
+    }
+
+    public Room GetRoom(Type roomType) {
+        foreach (Room room in rooms) {
+            if (room.GetType() == roomType) {
+                return room;
+            }
+        }
+        throw new Exception("Room not found.");
+    }
+
+    public Room GetStartingRoom() {
+        return GetRoom(typeof(CrewCabin));
     }
 }
