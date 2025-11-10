@@ -11,6 +11,7 @@ public class ActionManager {
         new DoExperiments(),
         new SecurityCheck(),
         new ShieldMaintenance(),
+        new FeedMickey(),
         new RationsCheckUp(),
         new RatTrapStorage(),
         new RatTrapDelivery(),
