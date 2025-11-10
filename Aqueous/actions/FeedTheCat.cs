@@ -1,6 +1,11 @@
 namespace Aqueous;
 
 public class FeedTheCat : Action {
+    public FeedTheCat()
+    {
+        Enable();
+    }
+    
     public override string GetName() {
         return "Feed the cat";
     }

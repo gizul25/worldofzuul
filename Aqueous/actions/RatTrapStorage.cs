@@ -1,6 +1,11 @@
 namespace Aqueous;
 
 public class RatTrapStorage : Action {
+    public RatTrapStorage()
+    {
+        Enable();
+    }
+    
     private int trapsPlaced = 0;
 
     public override string GetName() {

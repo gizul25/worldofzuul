@@ -2,6 +2,11 @@ namespace Aqueous;
 
 public class FeedMickey : Action
 {
+    public FeedMickey()
+    {
+        Enable();
+    }
+
     public override string GetName()
     {
         return "Feed Mickey the Bonnethead Shark";

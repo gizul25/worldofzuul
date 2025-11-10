@@ -1,6 +1,11 @@
 namespace Aqueous;
 
 public class EatFood : Action {
+    public EatFood()
+    {
+        Enable();
+    }
+    
     public override string GetName() {
         return "Eat food";
     }

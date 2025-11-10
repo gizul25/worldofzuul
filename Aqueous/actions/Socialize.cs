@@ -1,6 +1,11 @@
 namespace Aqueous;
 
 public class Socialize : Action {
+    public Socialize()
+    {
+        Enable();
+    }
+    
     public override string GetName()
     {
         return "Socialize";

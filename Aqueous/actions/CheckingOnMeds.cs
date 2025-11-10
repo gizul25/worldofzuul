@@ -1,6 +1,11 @@
 namespace Aqueous;
 
 public class CheckingOnMeds : Action {
+    public CheckingOnMeds()
+    {
+        Enable();
+    }
+    
     public override string GetName() {
         return "Check on medical equipment";
     }
@@ -10,6 +15,9 @@ public class CheckingOnMeds : Action {
     }
 
     public override void Perform(GameState state) {
+        base.Perform(state);
+        Disable();
         Console.WriteLine("Checking on medical equipment....");
+        
     }
 }

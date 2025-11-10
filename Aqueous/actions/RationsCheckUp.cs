@@ -1,6 +1,11 @@
 namespace Aqueous;
 
 public class RationsCheckUp : Action {
+    public RationsCheckUp()
+    {
+        Enable();
+    }
+    
     public override string GetName() {
         return "Check on rations";
     }

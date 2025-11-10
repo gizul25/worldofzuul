@@ -1,6 +1,11 @@
 namespace Aqueous;
 
 public class Sleep : Action {
+    public Sleep()
+    {
+        Enable();
+    }
+    
     public override string GetName() {
         return "Get rest";
     }

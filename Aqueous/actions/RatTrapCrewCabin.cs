@@ -1,6 +1,11 @@
 namespace Aqueous;
 
 public class RatTrapCrewCabin : Action {
+    public RatTrapCrewCabin()
+    {
+        Enable();
+    }
+    
     public override string GetName() {
         return "Setup rat trap";
     }
