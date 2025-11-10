@@ -18,7 +18,6 @@ public class TalkToJoey2 : Action {
         Disable();
         state.actionManager.GetAction<FeedTheCat>().Enable();
         state.itemManager.AddItem(new Leftovers());
-        // TODO: add dialogue
-        Console.WriteLine("");
+        Console.WriteLine("Joey:“Ya fixed it? My, my, so fast! And my boy's workin' better than ever, no growlin' no nothin'. Here, take this as a little thanks. Maybe give it to the little fluff man over there.”");
     }
 }

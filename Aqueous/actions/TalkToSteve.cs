@@ -21,7 +21,6 @@ public class TalkToSteve : Action {
         base.Perform(state);
         Disable();
         state.actionManager.GetAction<FeedMickey>().Enable();
-        // TODO: add dialogue
-        Console.WriteLine("");
+        Console.WriteLine("Steve:“Hey, my man! See, I'm very sick, have a terrible headache and everything, I don't think I can do my part today. You can do the works, right? Thanks, I owe you big time!”");
     }
 }
