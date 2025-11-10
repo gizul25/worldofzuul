@@ -15,8 +15,10 @@ public class CommandManager {
     ];
     
     public static bool Run(GameState state) {
-        Console.WriteLine("");
-        Console.WriteLine(state.CurrentRoom.GetDescription());
+        if (state.IsJustEnteredRoom) {
+            Console.WriteLine(state.CurrentRoom.GetDescription());
+            state.IsJustEnteredRoom = false;
+        }
         Console.Write("> ");
 
         string? input = Console.ReadLine();

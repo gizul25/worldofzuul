@@ -17,6 +17,6 @@ public class MoveCommand : Command {
             return;
         }
 
-        state.CurrentRoom = state.CurrentRoom.Exits[direction];
+        state.MoveToRoom(state.CurrentRoom.Exits[direction]);
     }
 }
