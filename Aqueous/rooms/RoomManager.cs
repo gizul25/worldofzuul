@@ -91,6 +91,7 @@ public class RoomManager {
         rooms.Add(emergencyEscape);
     }
 
+    /// Returns room instance given type of a room
     public Room GetRoom(Type roomType) {
         foreach (Room room in rooms) {
             if (room.GetType() == roomType) {
@@ -100,6 +101,7 @@ public class RoomManager {
         throw new Exception("Room not found.");
     }
 
+    /// Returns the room instance where the player starts
     public Room GetStartingRoom() {
         return GetRoom(typeof(CrewCabin));
     }

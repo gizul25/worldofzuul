@@ -19,6 +19,7 @@ public class NPCManager {
         new StorageManager()
     ];
 
+    /// Returns a list of NPCs in a given room
     public List<NPC> GetRoomNPCs(Room room) {
         List<NPC> roomNPCs = new List<NPC>();
         foreach (NPC npc in npcs) {

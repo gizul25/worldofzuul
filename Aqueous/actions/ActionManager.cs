@@ -26,6 +26,7 @@ public class ActionManager {
     ];
     public List<Action> AvailableActions { get; private set; } = new List<Action>();
 
+    /// Returns the action given the type of the action
     public Action GetAction<T>() {
         foreach (Action action in allActions) {
             if (action is T) {
@@ -35,6 +36,7 @@ public class ActionManager {
         throw new Exception("Action not found.");
     }
 
+    /// Returns active quests which are part of any quest
     public List<Action> GetCurrentQuestActions(GameState state) {
         List<Action> actions = new List<Action>();
         foreach (Action action in allActions) {
@@ -49,6 +51,8 @@ public class ActionManager {
         return actions;
     }
 
+    /// Updates list of available actions to perform in a room.
+    /// Updated after every command.
     public void UpdateAvailableActions(GameState state) {
         AvailableActions.Clear();
         foreach (Action action in allActions) {
@@ -58,6 +62,7 @@ public class ActionManager {
         }
     }
 
+    /// Prints all the available commands
     public void PrintAvailableActions() {
         for (int i = 0; i < AvailableActions.Count; i++) {
             Action action = AvailableActions[i];

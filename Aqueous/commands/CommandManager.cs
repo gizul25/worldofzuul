@@ -14,7 +14,8 @@ public class CommandManager {
         new MapCommand()
     ];
     
-    public static bool Run(GameState state) {
+    /// Waits for the user input and executes the command
+    public static void Run(GameState state) {
         if (state.IsJustEnteredRoom) {
             Console.WriteLine(state.CurrentRoom.GetDescription());
             state.IsJustEnteredRoom = false;
@@ -25,16 +26,16 @@ public class CommandManager {
 
         if (string.IsNullOrEmpty(input)) {
             Console.WriteLine("Please enter a command.");
-            return true;
+            return;
         }
 
         foreach (Command command in commands) {
             if (command.TryExecute(input, state)) {
-                return true;
+                return;
             }
         }
 
         Console.WriteLine("Invalid command.");
-        return true;
+        return;
     }
 }

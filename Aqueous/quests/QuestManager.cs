@@ -6,6 +6,7 @@ public class QuestManager {
         new SideQuests(),
     ];
     
+    /// Returns quest instance given type of a quest
     public IQuest GetQuest(Type type) {
         foreach(IQuest quest in allQuests) {
             if (quest.GetType() == type) {
