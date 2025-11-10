@@ -1,6 +1,9 @@
 namespace Aqueous;
 
 public class PetCat : Action {
+    public PetCat() {
+        Enable();
+    }
     public override string GetName() {
         return "Pet the Cat";
     }
