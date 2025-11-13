@@ -30,7 +30,8 @@ public class ActionManager {
         new StoreWaterSamples(),
         new UploadResearchData(),
         new Comunications(),
-        new IdentifySpecimens()
+        new IdentifySpecimens(),
+        new CollectMarineFloraSamples()
     ];
     public List<Action> AvailableActions { get; private set; } = new List<Action>();
 
