@@ -8,6 +8,6 @@ public class Security : Room
     public override string GetDescription()
     {
         return @"This is a Security Room. Well, at least an excuse for it. 
-Not like anyone’s going to steal some fossils.";
+Not like anyone’s going to steal some fossils in a world that's hanging on a thread.";
     }
 }
