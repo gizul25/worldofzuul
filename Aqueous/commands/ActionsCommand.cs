@@ -13,7 +13,7 @@ public class ActionsCommand : SimpleCommand {
 
         state.actionManager.PrintAvailableActions();
         if (state.actionManager.AvailableActions.Count > 0) {
-            Console.WriteLine("Enter \"do <num>\" to perform the action, e.g. \"do 1\"");
+            Console.WriteLine("Enter \"\x1b[32mdo\x1b[0m <num>\" to perform the action, e.g. \"\x1b[32mdo\x1b[0m 1\"");
         } else {
             Console.WriteLine("No actions");
         }
