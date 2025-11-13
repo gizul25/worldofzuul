@@ -57,7 +57,7 @@ public class Action {
     /// Used to mark this action as completed. Separate from disable for multiple
     /// part actions.
     public void Complete() {
-        Complete();
+        Disable();
         IsCompleted = true;
     }
 
