@@ -11,6 +11,6 @@ public class StationCat : NPC {
     }
     
     public override Type GetRoom() {
-        return typeof(SleepingQuarters);
+        return typeof(Cafeteria);
     }
 }
