@@ -26,9 +26,9 @@ public class GameState {
     public void EndGame() {
         RatTrapStorage ratAction = (RatTrapStorage)actionManager.GetAction<RatTrapStorage>();
         if (ratAction.IsCompleted) {
-            Console.WriteLine("You restored the underwater research station back to its former glory. Thank you!");
+            Console.WriteLine("You managed to maintain the underwater research station in a decent state. Hopefully everything gets better from here on.");
         } else {
-            Console.WriteLine("You went to sleep but rats ate the last bit of underwater protection.");
+            Console.WriteLine("You went to sleep wihtout doing your job. The rats ate through important wires and the station's systems collapsed. Everyone died because of your negligence.");
         }
 
         ShouldExit = true;

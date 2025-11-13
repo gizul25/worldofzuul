@@ -34,12 +34,13 @@ public class DoExperiments : Action {
 
     public override void Perform(GameState state) {
         base.Perform(state);
+        Console.WriteLine("Helen: “Oh, you're here. Good. You'll help make some medicine for Mickey. Here, take these vials and mix them in this order.” Helen points at the vials - fourth, second, first, third and fifth respectively.");
         Console.WriteLine("You grab a few vials and a bunch of extra equipment. Your hands are stlightly shaky as you carefully mix the solutions.");
         Console.WriteLine("Thankfully those particular chemicals won't explode if you mix them wrong. At least they shouldn't.");
 
         while (true)
         {
-            Console.Write("Helen: “Oh, you're here. Good. You'll help make some medicine for Mickey. Here, take these vials and mix them in this order.” Helen points at the vials - fourth, second, first, third and fifth respectively. Mix chemicals: ");
+            Console.Write("Mix chemicals: ");
             int[] array = new int[5];
             int[] validAnswer = { 4, 2, 1, 3, 5 };
             for (int i = 0; i < array.Length; i++)
@@ -61,7 +62,7 @@ public class DoExperiments : Action {
                 Console.WriteLine("Helen: “Hm, this doesn’t seem right. Could you try again? Maybe listen to my intructions this time, why don’t you?”");
             }
         }
-        Console.WriteLine("Added blood sample");
+        Console.WriteLine("You got Mickey's blood sample. Maybe one of the researchers needs it?");
         state.itemManager.AddItem(new BloodSample());
     }
 }
