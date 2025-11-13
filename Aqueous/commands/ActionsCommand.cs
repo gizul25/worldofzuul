@@ -13,7 +13,7 @@ public class ActionsCommand : SimpleCommand {
 
         state.actionManager.PrintAvailableActions();
         if (state.actionManager.AvailableActions.Count > 0) {
-            Console.WriteLine("Enter \"\x1b[32mdo\x1b[0m <num>\" to perform the action, e.g. \"\x1b[32mdo\x1b[0m 1\"");
+            Console.WriteLine("Enter \"\x1b[32mdo <num>\x1b[0m\" to perform the action, e.g. \"\x1b[32mdo 1\x1b[0m\"");
         } else {
             Console.WriteLine("No actions");
         }
@@ -27,7 +27,7 @@ public class ActionsCommand : SimpleCommand {
 
         Console.WriteLine("NPCs:");
         foreach (NPC npc in npcs) {
-            Console.WriteLine($"- {npc.GetName()} ({npc.GetJobTitle()})");
+            Console.WriteLine($"- \x1b[33m{npc.GetName()}\x1b[0m (\x1b[36m{npc.GetJobTitle()}\x1b[0m)");
         }
     }
 }

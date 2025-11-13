@@ -14,7 +14,7 @@ public class ItemsCommand : SimpleCommand {
 
         for (int i = 0; i < items.Count; i++) {
             IItem item = items[i];
-            Console.WriteLine($"[{i + 1}] {item.GetName()}");
+            Console.WriteLine($"[\x1b[32m{i + 1}\x1b[0m] \x1b[33m{item.GetName()}\x1b[0m");
             Console.WriteLine(item.GetDescription());
         }
     }

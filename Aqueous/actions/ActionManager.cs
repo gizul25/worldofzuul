@@ -72,7 +72,7 @@ public class ActionManager {
     public void PrintAvailableActions() {
         for (int i = 0; i < AvailableActions.Count; i++) {
             Action action = AvailableActions[i];
-            Console.WriteLine("[" + (i+1) + "] " + $"\x1b[33m{action.GetName()}\x1b[0m");
+            Console.WriteLine("[\x1b[32m" + (i+1) + "\x1b[0m] " + $"\x1b[33m{action.GetName()}\x1b[0m");
         }
     }
 }

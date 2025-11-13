@@ -15,8 +15,9 @@ public class HelpCommand : SimpleCommand {
         Console.WriteLine("Another day in your miserable work life starts. Do your job and make sure the station does't explode.");
         Console.WriteLine("Perform the tasks given to you or don't. Regardless, your choices will have consequences.");
         Console.WriteLine("Remember that.");
-        Console.WriteLine("Good luck.");
-        Console.WriteLine("Navigate the station by typing 'north', 'south', 'east', or 'west'.");
+        Console.WriteLine("\x1b[33mGood luck!\x1b[0m");
+        Console.WriteLine();
+        Console.WriteLine("Navigate the station by typing '\x1b[32mnorth\x1b[0m', '\x1b[32msouth\x1b[0m', '\x1b[32meast\x1b[0m', or '\x1b[32mwest\x1b[0m'.");
         Console.WriteLine("Type '\x1b[32mlook\x1b[0m' for more details.");
         Console.WriteLine("Type '\x1b[32mvent\x1b[0m' to vent in some of the rooms.");
         Console.WriteLine("Type '\x1b[32mactions\x1b[0m' to get actions available in the room.");

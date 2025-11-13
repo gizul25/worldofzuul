@@ -20,7 +20,8 @@ public class CommandManager {
             Console.WriteLine(state.CurrentRoom.GetDescription());
             state.IsJustEnteredRoom = false;
         }
-        Console.Write("> ");
+        Console.Write("\x1b[32m> ");
+        Console.Write("\x1b[0m");
 
         string? input = Console.ReadLine();
 

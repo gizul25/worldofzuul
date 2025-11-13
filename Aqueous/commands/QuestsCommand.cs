@@ -26,7 +26,7 @@ public class QuestsCommand : SimpleCommand {
 
             Room room = state.roomManager.GetRoom(action.GetRoom());
 
-            Console.WriteLine($"\x1b[33m{quest.GetName()} - {action.GetName()} [{room.GetName()}]\x1b[0m");
+            Console.WriteLine($"\x1b[33m{quest.GetName()}\x1b[90m - \x1b[0m{action.GetName()} [\x1b[36m{room.GetName()}\x1b[0m]");
         }
     }
 }

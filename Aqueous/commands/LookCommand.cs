@@ -10,7 +10,7 @@ public class LookCommand : SimpleCommand {
             Direction direction = kvp.Key;
             Room room = kvp.Value;
 
-            Console.WriteLine("On the " + direction + ": " + room.GetName());
+            Console.WriteLine("On the \x1b[33m" + direction + "\x1b[0m: \x1b[36m" + room.GetName() + "\x1b[0m");
         }
     }
 }
