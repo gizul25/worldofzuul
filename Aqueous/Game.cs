@@ -20,9 +20,10 @@
         private static void PrintWelcome()
         {
             Console.WriteLine("Welcome to Aqueous!");
-            Console.WriteLine("Earth has been through a lot.");
-            Console.WriteLine("Now, following the events of World War 5, the surface is completely engulfed in a nuclear winter, surpassing any ice age the world had ever seen before.");
-            Console.WriteLine("With the surface unhabitable, humanity has turned to what's underwater as a last resort.");
+            Console.WriteLine("Earth has been through a lot in the past few centuries.");
+            Console.WriteLine("Now, following the events of World War 5, the surface is completely engulfed in a nuclear winter,");
+            Console.WriteLine("surpassing any ice age the world had ever seen before.");
+            Console.WriteLine("With the surface uninhabitable, humanity has turned to the underwater world as a last resort.");
             Console.WriteLine("Aqueous is one of the last underwater stations preserving life on Earth.");
             Console.WriteLine("Without it, society will be one step closer to complete doom...");
             HelpCommand.PrintHelp();
