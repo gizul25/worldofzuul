@@ -23,6 +23,7 @@ public class TalkToJoey2 : Action {
         Complete();
         state.actionManager.GetAction<FeedTheCat>().Enable();
         state.itemManager.AddItem(new Leftovers());
-        Console.WriteLine("Joey:“Ya fixed it? My, my, so fast! And my boy's workin' better than ever, no growlin' no nothin'. Here, take this as a little thanks. Maybe give it to the little fluff man over there.”");
+        Console.WriteLine("Joey:“Ya fixed it? My, my, so fast! And my boy's workin' better than ever, no growlin' no nothin'.");
+        Console.WriteLine("Here, take this as a little thanks. Maybe give it to the little fluff man over there.”");
     }
 }

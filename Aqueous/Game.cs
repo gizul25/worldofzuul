@@ -13,7 +13,7 @@
                 CommandManager.Run(state);
                 state.actionManager.UpdateAvailableActions(state);
             }
-            Console.WriteLine("Thank you for playing Aqueous! Remember to be mindful of your actions unless you want to end up like Steve!");
+            Console.WriteLine("Thank you for playing Aqueous! Remember to be mindful of your actions unless you want the world to end!");
         }
 
         /// Prints introductory message at the start of the game

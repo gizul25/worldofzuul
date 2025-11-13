@@ -21,6 +21,7 @@ public class TalkToSteve : Action {
         base.Perform(state);
         Complete();
         state.actionManager.GetAction<FeedMickey>().Enable();
-        Console.WriteLine("Steve:“Hey, my man! See, I'm very sick, have a terrible headache and everything, I don't think I can do my part today. You can do the works, right? Thanks, I owe you big time!”");
+        Console.WriteLine("Steve:“Hey, my man! See, I'm very sick, have a terrible headache and everything,");
+        Console.WriteLine("I don't think I can do my part today. You can do the works, right? Thanks, I owe you big time!”");
     }
 }
