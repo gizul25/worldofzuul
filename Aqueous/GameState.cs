@@ -15,11 +15,14 @@ public class GameState {
         this.CurrentRoom = roomManager.GetStartingRoom();
     }
 
+    /// Moves the player to a different room
     public void MoveToRoom(Room room) {
         CurrentRoom = room;
         IsJustEnteredRoom = true;
     }
 
+    /// Handles multiple endings, used when the player completes the game fully,
+    /// not for 'quit' command.
     public void EndGame() {
         RatTrapStorage ratAction = (RatTrapStorage)actionManager.GetAction<RatTrapStorage>();
         if (ratAction.IsCompleted) {
