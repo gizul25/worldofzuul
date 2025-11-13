@@ -31,6 +31,6 @@ public class SecurityCheck : Action {
         base.Perform(state);
         Complete();
         state.itemManager.ConsumeItem<SecurityKey>();
-        Console.WriteLine("Security check up....");
+        Console.WriteLine("You use the key you've got to make sure the security is working like it should. Everything seems fine.");
     }
 }

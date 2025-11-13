@@ -22,7 +22,7 @@ public class Sleep : Action {
     public override void Perform(GameState state) {
         base.Perform(state);
         Complete();
-        Console.WriteLine("Sleeping....");
+        Console.WriteLine("You get into bed and hope for a peaceful slumber, praying tomorrow will bring something worth living for.");
         state.EndGame();
     }
 }

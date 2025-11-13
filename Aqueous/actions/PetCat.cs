@@ -16,6 +16,6 @@ public class PetCat : Action {
     public override void Perform(GameState state) {
         base.Perform(state);
         Complete();
-        Console.WriteLine("Petting Leonardo...");
+        Console.WriteLine("You reach out and pet Leonardo's head, a rare smile on your lips as the cat purrs and nuzzles into your hand.");
     }
 }

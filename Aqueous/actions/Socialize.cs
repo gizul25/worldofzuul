@@ -24,6 +24,6 @@ public class Socialize : Action {
     public override void Perform(GameState state) {
         base.Perform(state);
         Complete();
-        Console.WriteLine("Socializing....");
+        Console.WriteLine("You go around the room exchanging tight smiles and pointless small talk. No one's in the mood for deep conversations.");
     }
 }

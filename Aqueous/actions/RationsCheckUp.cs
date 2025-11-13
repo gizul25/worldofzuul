@@ -17,6 +17,6 @@ public class RationsCheckUp : Action {
     public override void Perform(GameState state) {
         base.Perform(state);
         Complete();
-        Console.WriteLine("Checking up on rations....");
+        Console.WriteLine("You carefully inspect the shelves and boxes. Fortunately nothing seems to be missing or expired.");
     }
 }
