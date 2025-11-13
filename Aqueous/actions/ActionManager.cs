@@ -24,6 +24,11 @@ public class ActionManager {
         new TalkToSteve(),
         new FeedTheCat(),
         new TalkToViktor(),
+        new DecontaminateFishSamples(),
+        new CheckCoralReefStatus(),
+        new AdjustReactorTemp(),
+        new StoreWaterSamples(),
+        new UploadResearchData()
     ];
     public List<Action> AvailableActions { get; private set; } = new List<Action>();
 
