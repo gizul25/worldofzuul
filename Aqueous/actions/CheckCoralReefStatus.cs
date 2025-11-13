@@ -29,7 +29,7 @@ public class CheckCoralReefStatus : Action {
             Thread.Sleep(1000);
         }
         Console.WriteLine();
-        Console.WriteLine("Oh no, it seems that coral reefs are deteriorating due to high levels of water pollution.");
+        Console.WriteLine("It seems like the nearby coral reefs are deteriorating due to high levels of water pollution. You should include it in the next report.");
         Complete();
     }
 }

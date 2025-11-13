@@ -23,7 +23,7 @@ public class AdjustReactorTemp : Action {
 
     public override void Perform(GameState state) {
         base.Perform(state);
-        Console.WriteLine("It seems that reactor is now at 1200 degrees but it should be around 1100 degrees! Enter \"+\" or \"-\" to change reactor temperature by 10 degrees.");
+        Console.WriteLine("It seems that reactor is now at 1200 degrees but it should be exactly 1100 degrees! Enter \"+\" or \"-\" to change reactor temperature by 10 degrees.");
 
         int reactorTemp = 1200;
         while (reactorTemp != 1100) {
@@ -38,7 +38,7 @@ public class AdjustReactorTemp : Action {
             }
             Console.WriteLine($"Reactor's temperature: {reactorTemp}");
         }
-        Console.WriteLine("Now reactor is back to it's stable state!");
+        Console.WriteLine("The reactor is back to it's stable state. Crisis averted.");
         Complete();
     }
 }

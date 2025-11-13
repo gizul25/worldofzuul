@@ -39,7 +39,7 @@ public class UploadResearchData : Action {
             Thread.Sleep(1000);
         }
         Console.WriteLine();
-        Console.WriteLine("Files uploaded!");
+        Console.WriteLine("Files uploaded successfully.");
         Complete();
     }
 }

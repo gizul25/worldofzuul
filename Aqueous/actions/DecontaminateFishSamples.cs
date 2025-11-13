@@ -8,7 +8,7 @@ public class DecontaminateFishSamples : Action {
     
     public override string GetName()
     {
-        return "Decontaminate fish samples";
+        return "Decontaminate fish tanks";
     }
 
     public override Type GetRoom()
@@ -23,7 +23,7 @@ public class DecontaminateFishSamples : Action {
 
     public override void Perform(GameState state) {
         base.Perform(state);
-        Console.WriteLine("Hmmm... this fish tank looks rather contaminated. Let's clean it up!");
+        Console.WriteLine("Hmmm... this fish tank looks rather contaminated. You should clean it before the fish die.");
         Console.WriteLine("Type \"clean\" five times to clean up the fish tank.");
         
         int cleanCounter = 0;
@@ -35,7 +35,7 @@ public class DecontaminateFishSamples : Action {
             }
             cleanCounter++;
         }
-        Console.WriteLine("Now the fishes can enjoy fresh water! Thank you.");
+        Console.WriteLine("The tank is clear and the glass isn't green from algae anymore. The fish are safe for now.");
         Complete();
     }
 }
