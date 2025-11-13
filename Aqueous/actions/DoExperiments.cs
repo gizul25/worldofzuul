@@ -34,7 +34,8 @@ public class DoExperiments : Action {
 
     public override void Perform(GameState state) {
         base.Perform(state);
-        Console.WriteLine("Experimenting on things....");
+        Console.WriteLine("You grab a few vials and a bunch of extra equipment. Your hands are stlightly shaky as you carefully mix the solutions.");
+        Console.WriteLine("Thankfully those particular chemicals won't explode if you mix them wrong and you finish the job in one piece.");
 
         while (true)
         {
