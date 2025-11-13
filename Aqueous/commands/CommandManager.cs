@@ -36,6 +36,5 @@ public class CommandManager {
         }
 
         Console.WriteLine("Invalid command.");
-        return;
     }
 }

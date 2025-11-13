@@ -26,6 +26,7 @@ public class RatTrapStorage : Action {
         trapsPlaced++;
         if (trapsPlaced == MAX_TRAPS) {
             Console.WriteLine("Placed all the traps!");
+            Complete();
             return;
         }
 
@@ -35,7 +36,7 @@ public class RatTrapStorage : Action {
 
     public override void Perform(GameState state) {
         base.Perform(state);
-        Complete();
+        Disable();
         Console.WriteLine("Placing traps in storage...");
         PlaceTrap();
     }
