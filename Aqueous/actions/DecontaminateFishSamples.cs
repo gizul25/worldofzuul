@@ -18,7 +18,7 @@ public class DecontaminateFishSamples : Action {
     
     public override Type? GetQuestType()
     {
-        return typeof(SideQuests);
+        return typeof(MainStoryline);
     }
 
     public override void Perform(GameState state) {

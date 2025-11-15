@@ -28,7 +28,8 @@ public class ActionManager {
         new CheckCoralReefStatus(),
         new AdjustReactorTemp(),
         new StoreWaterSamples(),
-        new UploadResearchData()
+        new UploadResearchData(),
+        new Comunications(),
     ];
     public List<Action> AvailableActions { get; private set; } = new List<Action>();
 
