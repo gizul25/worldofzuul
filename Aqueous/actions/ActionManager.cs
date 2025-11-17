@@ -30,7 +30,7 @@ public class ActionManager
         new AdjustReactorTemp(),
         new StoreWaterSamples(),
         new UploadResearchData(),
-        new Comunications(),
+        new SupplyComms(),
         new IdentifySpecimens(),
         new CollectMarineFloraSamples()
     ];
