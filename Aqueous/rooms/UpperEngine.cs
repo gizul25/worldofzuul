@@ -2,7 +2,7 @@ namespace Aqueous;
 
 public class UpperEngine : Room{
     public override string GetName() {
-        return "UpperEngine";
+        return "Upper Engine";
     }
     
     public override string GetDescription() {

@@ -2,7 +2,7 @@ namespace Aqueous;
 
 public class CrewCabin : Room {
     public override string GetName() {
-        return "Crew cabin";
+        return "Crew Cabin (Entrance)";
     }
 
     public override string GetDescription() {
