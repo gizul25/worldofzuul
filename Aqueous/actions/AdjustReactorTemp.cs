@@ -2,11 +2,6 @@ namespace Aqueous;
 
 public class AdjustReactorTemp : Action
 {
-    public AdjustReactorTemp()
-    {
-        Enable();
-    }
-
     public override string GetName()
     {
         return "Adjust reactor temperature";
@@ -48,5 +43,6 @@ public class AdjustReactorTemp : Action
         }
         Console.WriteLine("The reactor is back to it's stable state. Crisis averted.");
         Complete();
+        state.actionManager.GetAction<StoreWaterSamples>().Enable();
     }
 }

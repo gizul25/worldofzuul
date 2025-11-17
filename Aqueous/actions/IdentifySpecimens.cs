@@ -2,12 +2,6 @@ namespace Aqueous;
 
 class IdentifySpecimens : Action
 {
-
-    public IdentifySpecimens()
-    {
-        Enable();
-    }
-
     public override string GetName()
     {
         return "Identify the unknown specimen";

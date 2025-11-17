@@ -19,7 +19,7 @@ public class ShieldMaintenance : Action
 
     public override Type? GetQuestType()
     {
-        return typeof(MainStoryline);
+        return typeof(SideQuests);
     }
 
     public override void Perform(GameState state)
@@ -31,5 +31,6 @@ public class ShieldMaintenance : Action
         Console.WriteLine("It comes out positive, the station is safe. At least from external dangers.");
         Console.WriteLine("For your hard work, now you get a security key!");
         state.itemManager.AddItem(new SecurityKey());
+        state.actionManager.GetAction<SecurityCheck>().Enable();
     }
 }

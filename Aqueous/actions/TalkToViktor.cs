@@ -11,6 +11,11 @@ class TalkToViktor : Action
         return typeof(PrimaryResearch);
     }
 
+    public override Type? GetQuestType()
+    {
+        return typeof(MainStoryline);
+    }
+
     public override void Perform(GameState state)
     {
         base.Perform(state);
@@ -24,6 +29,6 @@ class TalkToViktor : Action
         state.actionManager.GetAction<RatTrapCoolingSystem>().Enable();
         state.actionManager.GetAction<RatTrapCrewCabin>().Enable();
 
-        state.actionManager.GetAction<DoExperiments>().Enable();
+        state.actionManager.GetAction<SupplyComms>().Enable();
     }
 }

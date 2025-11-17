@@ -2,11 +2,6 @@ namespace Aqueous;
 
 public class Socialize : Action
 {
-    public Socialize()
-    {
-        Enable();
-    }
-
     public override string GetName()
     {
         return "Socialize";
@@ -27,5 +22,6 @@ public class Socialize : Action
         base.Perform(state);
         Complete();
         Console.WriteLine("You go around the room exchanging tight smiles and pointless small talk. No one's in the mood for deep conversations.");
+        state.actionManager.GetAction<IdentifySpecimens>().Enable();
     }
 }

@@ -2,11 +2,6 @@ namespace Aqueous;
 
 public class CheckCoralReefStatus : Action
 {
-    public CheckCoralReefStatus()
-    {
-        Enable();
-    }
-
     public override string GetName()
     {
         return "Check coral reef status";
@@ -19,7 +14,7 @@ public class CheckCoralReefStatus : Action
 
     public override Type? GetQuestType()
     {
-        return typeof(SideQuests);
+        return typeof(MainStoryline);
     }
 
     public override void Perform(GameState state)
@@ -34,5 +29,6 @@ public class CheckCoralReefStatus : Action
         Console.WriteLine();
         Console.WriteLine("It seems like the nearby coral reefs are deteriorating due to high levels of water pollution. You should include it in the next report.");
         Complete();
+        state.actionManager.GetAction<DecontaminateFishSamples>().Enable();
     }
 }

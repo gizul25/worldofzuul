@@ -2,11 +2,6 @@ namespace Aqueous;
 
 public class DecontaminateFishSamples : Action
 {
-    public DecontaminateFishSamples()
-    {
-        Enable();
-    }
-
     public override string GetName()
     {
         return "Decontaminate fish tanks";
@@ -41,5 +36,6 @@ public class DecontaminateFishSamples : Action
         }
         Console.WriteLine("The tanks are clean and the glass isn't green from algae anymore. The fish are safe for now.");
         Complete();
+        state.actionManager.GetAction<RationsCheckUp>().Enable();
     }
 }

@@ -2,11 +2,6 @@ namespace Aqueous;
 
 public class PetCat : Action
 {
-    public PetCat()
-    {
-        Enable();
-    }
-
     public override string GetName()
     {
         return "Pet the Cat";
@@ -15,6 +10,11 @@ public class PetCat : Action
     public override Type GetRoom()
     {
         return typeof(Cafeteria);
+    }
+
+    public override Type? GetQuestType()
+    {
+        return typeof(SideQuests);
     }
 
     public override void Perform(GameState state)

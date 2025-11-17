@@ -5,6 +5,7 @@ public class SupplyComms : Action
 {
     public SupplyComms()
     {
+        // TODO
         Enable();
     }
 
@@ -20,7 +21,7 @@ public class SupplyComms : Action
 
     public override Type? GetQuestType()
     {
-        return typeof(MainStoryline);
+        return typeof(SideQuests);
     }
 
     public override void Perform(GameState state)
@@ -51,5 +52,6 @@ public class SupplyComms : Action
         }
         Console.WriteLine("Thank you for order the items, we appreciate your time and effort");
         Complete();
+        state.actionManager.GetAction<DoExperiments>().Enable();
     }
 }

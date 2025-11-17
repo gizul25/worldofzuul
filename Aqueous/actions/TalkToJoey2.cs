@@ -2,11 +2,6 @@ namespace Aqueous;
 
 public class TalkToJoey2 : Action
 {
-    public TalkToJoey2()
-    {
-        Enable();
-    }
-
     public override string GetName()
     {
         return "Talk to Joey 2";

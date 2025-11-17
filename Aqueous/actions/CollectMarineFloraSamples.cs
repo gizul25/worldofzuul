@@ -2,11 +2,6 @@ namespace Aqueous;
 
 public class CollectMarineFloraSamples : Action
 {
-    public CollectMarineFloraSamples()
-    {
-        Enable();
-    }
-
     public override string GetName()
     {
         return "Collect marine flora samples";
@@ -47,5 +42,6 @@ public class CollectMarineFloraSamples : Action
         }
         Console.WriteLine("Good job! Now you have enough samples to inspect them.");
         Complete();
+        state.actionManager.GetAction<UploadResearchData>().Enable();
     }
 }

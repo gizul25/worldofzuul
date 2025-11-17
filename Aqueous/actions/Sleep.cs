@@ -2,11 +2,6 @@ namespace Aqueous;
 
 public class Sleep : Action
 {
-    public Sleep()
-    {
-        Enable();
-    }
-
     public override string GetName()
     {
         return "Get rest";
@@ -19,7 +14,7 @@ public class Sleep : Action
 
     public override Type? GetQuestType()
     {
-        return typeof(SideQuests);
+        return typeof(MainStoryline);
     }
 
     public override void Perform(GameState state)

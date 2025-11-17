@@ -2,11 +2,6 @@ namespace Aqueous;
 
 public class SecurityCheck : Action
 {
-    public SecurityCheck()
-    {
-        Enable();
-    }
-
     public override string GetName()
     {
         return "Security check";
@@ -19,7 +14,7 @@ public class SecurityCheck : Action
 
     public override Type? GetQuestType()
     {
-        return typeof(MainStoryline);
+        return typeof(SideQuests);
     }
 
     public override bool IsActive(GameState state)
@@ -41,5 +36,6 @@ public class SecurityCheck : Action
         Complete();
         state.itemManager.ConsumeItem<SecurityKey>();
         Console.WriteLine("You use the key you've got to make sure the security is working like it should. Everything seems fine.");
+        state.actionManager.GetAction<AdjustReactorTemp>().Enable();
     }
 }

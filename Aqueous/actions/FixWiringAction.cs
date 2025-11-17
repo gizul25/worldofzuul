@@ -2,11 +2,6 @@ namespace Aqueous;
 
 public class FixWiringAction : Action
 {
-    public FixWiringAction()
-    {
-        Enable();
-    }
-
     public override string GetName()
     {
         return "Fix wiring";

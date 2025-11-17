@@ -4,11 +4,6 @@ namespace Aqueous;
 
 public class DoExperiments : Action
 {
-    public DoExperiments()
-    {
-        Enable();
-    }
-
     public override string GetName()
     {
         return "Experiment";
@@ -67,5 +62,6 @@ public class DoExperiments : Action
         }
         Console.WriteLine("You got Mickey's blood sample. Maybe one of the researchers needs it?");
         state.itemManager.AddItem(new BloodSample());
+        state.actionManager.GetAction<DoResearch>().Enable();
     }
 }

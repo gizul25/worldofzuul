@@ -12,6 +12,11 @@ public class FeedMickey : Action
         return typeof(PrimaryResearch);
     }
 
+    public override Type? GetQuestType()
+    {
+        return typeof(MainStoryline);
+    }
+
     public override void Perform(GameState state)
     {
         base.Perform(state);
@@ -22,5 +27,6 @@ public class FeedMickey : Action
         Console.WriteLine("You hear Viktor coming behind you.");
         Console.WriteLine("The job is done. You should probably talk to Viktor.");
         state.actionManager.GetAction<TalkToViktor>().Enable();
+        state.actionManager.GetAction<CheckCoralReefStatus>().Enable();
     }
 }

@@ -2,11 +2,6 @@ namespace Aqueous;
 
 public class StoreWaterSamples : Action
 {
-    public StoreWaterSamples()
-    {
-        Enable();
-    }
-
     public override string GetName()
     {
         return "Store water samples";

@@ -2,11 +2,6 @@ namespace Aqueous;
 
 public class UploadResearchData : Action
 {
-    public UploadResearchData()
-    {
-        Enable();
-    }
-
     public override string GetName()
     {
         return "Upload research data";

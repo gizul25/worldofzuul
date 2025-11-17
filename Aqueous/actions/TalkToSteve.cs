@@ -2,11 +2,6 @@ namespace Aqueous;
 
 public class TalkToSteve : Action
 {
-    public TalkToSteve()
-    {
-        Enable();
-    }
-
     public override string GetName()
     {
         return "Talk to Steve";
@@ -27,6 +22,7 @@ public class TalkToSteve : Action
         base.Perform(state);
         Complete();
         state.actionManager.GetAction<FeedMickey>().Enable();
+        state.actionManager.GetAction<CheckingOnMeds>().Enable();
         Console.WriteLine("Steve:“Hey, my man! See, I'm very sick, have a terrible headache and everything,");
         Console.WriteLine("I don't think I can do my part today. You can do the works, right? Thanks, I owe you big time!”");
     }
