@@ -32,8 +32,7 @@ public class ActionManager
         new UploadResearchData(),
         new SupplyComms(),
         new IdentifySpecimens(),
-        new CollectMarineFloraSamples(),
-        new Comunications(),
+        new CollectMarineFloraSamples()
     ];
     public List<Action> AvailableActions { get; private set; } = new List<Action>();
 
