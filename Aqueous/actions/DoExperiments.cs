@@ -1,4 +1,4 @@
-using System.Linq.Expressions;
+using System.Runtime.CompilerServices;
 
 namespace Aqueous;
 
@@ -39,17 +39,22 @@ public class DoExperiments : Action
         while (true)
         {
             Console.Write("Mix chemicals: ");
-            int[] array = new int[5];
-            int[] validAnswer = { 4, 2, 1, 3, 5 };
-            for (int i = 0; i < array.Length; i++)
+            string? input = Console.ReadLine();
+            if (input == null)
             {
-                // Console.Read() only reads one character and returns int as ASCII number
-                array[i] = Console.Read() - '0';
-                // Skip whitespace or newline
-                Console.Read();
+                Console.WriteLine("Please enter input.");
+                continue;
+            }
+            string[] words = input.Trim().Split(' ');
+            List<int> numbers = new List<int>();
+            foreach (string word in words)
+            {
+                int number = int.Parse(word);
+                numbers.Add(number);
             }
 
-            if (array.SequenceEqual(validAnswer))
+            int[] validAnswer = { 4, 2, 1, 3, 5 };
+            if (numbers.SequenceEqual(validAnswer))
             {
                 Console.WriteLine("Helen: “Good job. Maybe I should take advantage of you more often.”");
                 Complete();
