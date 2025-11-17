@@ -1,5 +1,3 @@
-using System.Runtime.CompilerServices;
-
 namespace Aqueous;
 
 public class DoExperiments : Action
