@@ -6,12 +6,14 @@
         public Room? Vent { get; private set; }
 
         /// Returns the display name of the room
-        public virtual string GetName() {
+        public virtual string GetName()
+        {
             return "unimplemented";
         }
-        
+
         /// Returns long description of the room
-        public virtual string GetDescription() {
+        public virtual string GetDescription()
+        {
             return "unimplemented";
         }
 
@@ -27,7 +29,8 @@
         /// Set room link for specific direction
         public void SetExit(Direction direction, Room? neighbor)
         {
-            if (neighbor == null) {
+            if (neighbor == null)
+            {
                 Exits.Remove(direction);
                 return;
             }
@@ -35,7 +38,8 @@
         }
 
         /// Set vent link to specific room
-        public void SetVent(Room? ventExit) {
+        public void SetVent(Room? ventExit)
+        {
             Vent = ventExit;
         }
     }

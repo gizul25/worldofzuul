@@ -1,20 +1,24 @@
 namespace Aqueous;
 
-public class DoResearch : Action {
+public class DoResearch : Action
+{
     public DoResearch()
     {
         Enable();
     }
 
-    public override string GetName() {
+    public override string GetName()
+    {
         return "Do research";
     }
 
-    public override Type GetRoom() {
+    public override Type GetRoom()
+    {
         return typeof(PrimaryResearch);
     }
 
-    public override void Perform(GameState state) {
+    public override void Perform(GameState state)
+    {
         base.Perform(state);
         Complete();
         Console.WriteLine("You grab a few files and sit down at the desk with a heavy sigh.");

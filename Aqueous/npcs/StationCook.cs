@@ -1,7 +1,9 @@
 namespace Aqueous;
 
-public class StationCook : NPC {
-    public override string GetName() {
+public class StationCook : NPC
+{
+    public override string GetName()
+    {
         return "Joey";
     }
 
@@ -9,8 +11,9 @@ public class StationCook : NPC {
     {
         return "Station cook";
     }
-    
-    public override Type GetRoom() {
+
+    public override Type GetRoom()
+    {
         return typeof(Cafeteria);
     }
 }

@@ -1,30 +1,36 @@
 namespace Aqueous;
 
-public class RatTrapStorage : Action {
+public class RatTrapStorage : Action
+{
     public RatTrapStorage()
     {
         Enable();
     }
-    
+
     private int trapsPlaced = 0;
 
-    public override string GetName() {
+    public override string GetName()
+    {
         return "Setup rat trap";
     }
 
-    public override Type GetRoom() {
+    public override Type GetRoom()
+    {
         return typeof(Storage);
     }
 
-    public override Type? GetQuestType() {
+    public override Type? GetQuestType()
+    {
         return typeof(MainStoryline);
     }
 
-    public void PlaceTrap() {
+    public void PlaceTrap()
+    {
         int MAX_TRAPS = 5;
 
         trapsPlaced++;
-        if (trapsPlaced == MAX_TRAPS) {
+        if (trapsPlaced == MAX_TRAPS)
+        {
             Console.WriteLine("Placed all the traps!");
             Complete();
             return;
@@ -34,7 +40,8 @@ public class RatTrapStorage : Action {
         Console.WriteLine($"{remainingTraps} traps remaining.");
     }
 
-    public override void Perform(GameState state) {
+    public override void Perform(GameState state)
+    {
         base.Perform(state);
         Disable();
         Console.WriteLine("Placing traps in storage...");

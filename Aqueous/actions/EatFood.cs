@@ -1,12 +1,14 @@
 namespace Aqueous;
 
-public class EatFood : Action {
+public class EatFood : Action
+{
     public EatFood()
     {
         Enable();
     }
-    
-    public override string GetName() {
+
+    public override string GetName()
+    {
         return "Eat food";
     }
 
@@ -14,13 +16,14 @@ public class EatFood : Action {
     {
         return typeof(Cafeteria);
     }
-    
+
     public override Type? GetQuestType()
     {
         return typeof(SideQuests);
     }
 
-    public override void Perform(GameState state) {
+    public override void Perform(GameState state)
+    {
         base.Perform(state);
         Complete();
         Console.WriteLine("You grab your daily portion from Joey, muttering a quick thanks and sitting down at a table in the corner.");

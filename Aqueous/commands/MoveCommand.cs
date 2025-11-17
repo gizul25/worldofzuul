@@ -1,18 +1,25 @@
 namespace Aqueous;
 
-public class MoveCommand : Command {
-    public override bool TryExecute(string input, GameState state) {
-        try {
+public class MoveCommand : Command
+{
+    public override bool TryExecute(string input, GameState state)
+    {
+        try
+        {
             Direction direction = DirectionHelper.DirectionFromString(input);
             Run(state, direction);
             return true;
-        } catch (Exception) {
+        }
+        catch (Exception)
+        {
             return false;
         }
     }
 
-    public void Run(GameState state, Direction direction) {
-        if (!state.CurrentRoom.Exits.ContainsKey(direction)) {
+    public void Run(GameState state, Direction direction)
+    {
+        if (!state.CurrentRoom.Exits.ContainsKey(direction))
+        {
             Console.WriteLine($"You can't go {direction}!");
             return;
         }

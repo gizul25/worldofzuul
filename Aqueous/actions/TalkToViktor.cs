@@ -1,6 +1,7 @@
 namespace Aqueous;
 
-class TalkToViktor : Action {
+class TalkToViktor : Action
+{
     public override string GetName()
     {
         return "Talk to Viktor";

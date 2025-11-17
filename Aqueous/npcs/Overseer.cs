@@ -2,7 +2,8 @@ namespace Aqueous;
 
 public class Overseer : NPC
 {
-    public override string GetName() {
+    public override string GetName()
+    {
         return "Slobodan";
     }
 
@@ -10,8 +11,9 @@ public class Overseer : NPC
     {
         return "Overseer";
     }
-    
-    public override Type GetRoom() {
+
+    public override Type GetRoom()
+    {
         return typeof(PrimaryResearch);
     }
 }

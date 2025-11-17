@@ -1,6 +1,7 @@
 namespace Aqueous;
 
-public class NPCManager {
+public class NPCManager
+{
     private static NPC[] npcs = [
         new CommunicationOfficer(),
         new Doctor(),
@@ -20,10 +21,13 @@ public class NPCManager {
     ];
 
     /// Returns a list of NPCs in a given room
-    public List<NPC> GetRoomNPCs(Room room) {
+    public List<NPC> GetRoomNPCs(Room room)
+    {
         List<NPC> roomNPCs = new List<NPC>();
-        foreach (NPC npc in npcs) {
-            if (npc.GetRoom() == room.GetType()) {
+        foreach (NPC npc in npcs)
+        {
+            if (npc.GetRoom() == room.GetType())
+            {
                 roomNPCs.Add(npc);
             }
         }

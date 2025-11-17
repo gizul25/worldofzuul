@@ -2,7 +2,8 @@ namespace Aqueous;
 
 public class MarineMedic : NPC
 {
-    public override string GetName() {
+    public override string GetName()
+    {
         return "Viktor";
     }
 
@@ -10,8 +11,9 @@ public class MarineMedic : NPC
     {
         return "Medic(marine)";
     }
-    
-    public override Type GetRoom() {
+
+    public override Type GetRoom()
+    {
         return typeof(PrimaryResearch);
     }
 }

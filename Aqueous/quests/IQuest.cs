@@ -1,6 +1,7 @@
 namespace Aqueous;
 
-public interface IQuest {
+public interface IQuest
+{
     /// Returns the display name of the quest
     string GetName();
 }

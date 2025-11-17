@@ -1,15 +1,19 @@
 namespace Aqueous;
 
-public class HelpCommand : SimpleCommand {
-    public override string GetName() {
+public class HelpCommand : SimpleCommand
+{
+    public override string GetName()
+    {
         return "help";
     }
 
-    public override void Run(GameState state) {
+    public override void Run(GameState state)
+    {
         PrintHelp();
     }
 
-    public static void PrintHelp() {
+    public static void PrintHelp()
+    {
         Console.WriteLine("You're one of the station's main technicians but the job title is just a cover since you often end");
         Console.WriteLine("up doing more than just tech stuff. You never complain though. The risk isn't worth it.");
         Console.WriteLine("Another day in your miserable work life starts. Do your job and make sure the station does't explode.");

@@ -1,7 +1,9 @@
 namespace Aqueous;
 
-public class SoftwareEngineer : NPC {
-    public override string GetName() {
+public class SoftwareEngineer : NPC
+{
+    public override string GetName()
+    {
         return "Bob";
     }
 
@@ -9,8 +11,9 @@ public class SoftwareEngineer : NPC {
     {
         return "Software Engineer";
     }
-    
-    public override Type GetRoom() {
-        return typeof(Security); 
+
+    public override Type GetRoom()
+    {
+        return typeof(Security);
     }
 }

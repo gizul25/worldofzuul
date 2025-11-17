@@ -2,13 +2,15 @@ using System.Linq.Expressions;
 
 namespace Aqueous;
 
-public class DoExperiments : Action {
+public class DoExperiments : Action
+{
     public DoExperiments()
     {
         Enable();
     }
-    
-    public override string GetName() {
+
+    public override string GetName()
+    {
         return "Experiment";
     }
 
@@ -16,7 +18,7 @@ public class DoExperiments : Action {
     {
         return typeof(MainLab);
     }
-    
+
     public override Type? GetQuestType()
     {
         return typeof(MainStoryline);
@@ -24,7 +26,7 @@ public class DoExperiments : Action {
 
     public override bool IsActive(GameState state)
     {
-        if(!base.IsActive(state))
+        if (!base.IsActive(state))
         {
             return false;
         }
@@ -32,7 +34,8 @@ public class DoExperiments : Action {
         return true;
     }
 
-    public override void Perform(GameState state) {
+    public override void Perform(GameState state)
+    {
         base.Perform(state);
         Console.WriteLine("Helen: “Oh, you're here. Good. You'll help make some medicine for Mickey. Here, take these vials and mix them in this order.” Helen points at the vials - fourth, second, first, third and fifth respectively.");
         Console.WriteLine("You grab a few vials and a bunch of extra equipment. Your hands are stlightly shaky as you carefully mix the solutions.");

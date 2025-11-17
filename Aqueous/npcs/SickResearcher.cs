@@ -2,7 +2,8 @@ namespace Aqueous;
 
 public class SickResearcher : NPC
 {
-    public override string GetName() {
+    public override string GetName()
+    {
         return "Steve";
     }
 
@@ -10,8 +11,9 @@ public class SickResearcher : NPC
     {
         return "Researcher";
     }
-    
-    public override Type GetRoom() {
+
+    public override Type GetRoom()
+    {
         return typeof(MedBay);
     }
 }

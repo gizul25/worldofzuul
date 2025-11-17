@@ -2,7 +2,8 @@ namespace Aqueous;
 
 public class Doctor : NPC
 {
-    public override string GetName() {
+    public override string GetName()
+    {
         return "Bruce";
     }
 
@@ -11,7 +12,8 @@ public class Doctor : NPC
         return "Doctor";
     }
 
-    public override Type GetRoom() {
+    public override Type GetRoom()
+    {
         return typeof(MedBay);
     }
 

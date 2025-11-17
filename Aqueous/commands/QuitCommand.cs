@@ -1,11 +1,14 @@
 namespace Aqueous;
 
-public class QuitCommand : SimpleCommand {
-    public override string GetName() {
+public class QuitCommand : SimpleCommand
+{
+    public override string GetName()
+    {
         return "quit";
     }
 
-    public override void Run(GameState state) {
+    public override void Run(GameState state)
+    {
         state.ShouldExit = true;
     }
 }

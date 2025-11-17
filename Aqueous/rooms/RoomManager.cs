@@ -1,10 +1,12 @@
 namespace Aqueous;
 
-public class RoomManager {
+public class RoomManager
+{
     List<Room> rooms = new List<Room>();
 
     /// Initializes rooms, their links and vents. Returns starting room.
-    public RoomManager() {
+    public RoomManager()
+    {
         Room crewCabin = new CrewCabin();
         Room cafeteria = new Cafeteria();
         Room elevator = new Elevator();
@@ -92,9 +94,12 @@ public class RoomManager {
     }
 
     /// Returns room instance given type of a room
-    public Room GetRoom(Type roomType) {
-        foreach (Room room in rooms) {
-            if (room.GetType() == roomType) {
+    public Room GetRoom(Type roomType)
+    {
+        foreach (Room room in rooms)
+        {
+            if (room.GetType() == roomType)
+            {
                 return room;
             }
         }
@@ -102,7 +107,8 @@ public class RoomManager {
     }
 
     /// Returns the room instance where the player starts
-    public Room GetStartingRoom() {
+    public Room GetStartingRoom()
+    {
         return GetRoom(typeof(CrewCabin));
     }
 }

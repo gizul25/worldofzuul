@@ -1,23 +1,29 @@
 namespace Aqueous;
 
-public class ShieldMaintenance : Action {
-    public ShieldMaintenance() {
+public class ShieldMaintenance : Action
+{
+    public ShieldMaintenance()
+    {
         Enable();
     }
 
-    public override string GetName() {
+    public override string GetName()
+    {
         return "Maintain shields";
     }
 
-    public override Type GetRoom() {
+    public override Type GetRoom()
+    {
         return typeof(Shields);
     }
 
-    public override Type? GetQuestType() {
+    public override Type? GetQuestType()
+    {
         return typeof(MainStoryline);
     }
 
-    public override void Perform(GameState state) {
+    public override void Perform(GameState state)
+    {
         base.Perform(state);
         Complete();
         Console.WriteLine("You approach the massive machine in the center of the room and access the system.");

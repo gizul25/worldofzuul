@@ -1,23 +1,29 @@
 namespace Aqueous;
 
-public class TalkToJoey : Action {
-    public TalkToJoey() {
+public class TalkToJoey : Action
+{
+    public TalkToJoey()
+    {
         Enable();
     }
 
-    public override string GetName() {
+    public override string GetName()
+    {
         return "Talk to Joey";
     }
 
-    public override Type GetRoom() {
+    public override Type GetRoom()
+    {
         return typeof(Cafeteria);
     }
-    
-    public override Type? GetQuestType() {
+
+    public override Type? GetQuestType()
+    {
         return typeof(MainStoryline);
     }
 
-    public override void Perform(GameState state) {
+    public override void Perform(GameState state)
+    {
         base.Perform(state);
         Complete();
         state.actionManager.GetAction<FixWiringAction>().Enable();

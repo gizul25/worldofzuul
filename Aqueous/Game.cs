@@ -9,7 +9,8 @@
         {
             PrintWelcome();
 
-            while (!state.ShouldExit) {
+            while (!state.ShouldExit)
+            {
                 CommandManager.Run(state);
                 state.actionManager.UpdateAvailableActions(state);
             }

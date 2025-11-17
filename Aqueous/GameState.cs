@@ -1,7 +1,8 @@
 namespace Aqueous;
 
 /// Stores all changing parts of the game
-public class GameState {
+public class GameState
+{
     public Room CurrentRoom { get; private set; }
     public bool ShouldExit = false;
     public bool IsJustEnteredRoom = true;
@@ -11,23 +12,29 @@ public class GameState {
     public NPCManager npcManager { get; private set; } = new NPCManager();
     public QuestManager questManager { get; private set; } = new QuestManager();
 
-    public GameState() {
+    public GameState()
+    {
         this.CurrentRoom = roomManager.GetStartingRoom();
     }
 
     /// Moves the player to a different room
-    public void MoveToRoom(Room room) {
+    public void MoveToRoom(Room room)
+    {
         CurrentRoom = room;
         IsJustEnteredRoom = true;
     }
 
     /// Handles multiple endings, used when the player completes the game fully,
     /// not for 'quit' command.
-    public void EndGame() {
+    public void EndGame()
+    {
         RatTrapStorage ratAction = (RatTrapStorage)actionManager.GetAction<RatTrapStorage>();
-        if (ratAction.IsCompleted) {
+        if (ratAction.IsCompleted)
+        {
             Console.WriteLine("You managed to maintain the underwater research station in a decent state. Hopefully everything gets better from here on.");
-        } else {
+        }
+        else
+        {
             Console.WriteLine("You went to sleep wihtout doing your job. The rats ate through important wires and the station's systems collapsed. Everyone died because of your negligence.");
         }
 

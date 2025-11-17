@@ -1,11 +1,12 @@
 namespace Aqueous;
 
-public class UploadResearchData : Action {
+public class UploadResearchData : Action
+{
     public UploadResearchData()
     {
         Enable();
     }
-    
+
     public override string GetName()
     {
         return "Upload research data";
@@ -15,26 +16,30 @@ public class UploadResearchData : Action {
     {
         return typeof(Communications);
     }
-    
+
     public override Type? GetQuestType()
     {
         return typeof(SideQuests);
     }
 
-    public override void Perform(GameState state) {
+    public override void Perform(GameState state)
+    {
         base.Perform(state);
         Console.Write("Enter the upload destination: ");
         string? destination;
-        while (true) {
+        while (true)
+        {
             destination = Console.ReadLine();
-            if (destination == null || destination == "") {
+            if (destination == null || destination == "")
+            {
                 Console.WriteLine("Destination cannot be empty.");
                 continue;
             }
             break;
         }
         Console.Write($"Uploading research data to {destination}.");
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 5; i++)
+        {
             Console.Write(".");
             Thread.Sleep(1000);
         }

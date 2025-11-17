@@ -2,7 +2,8 @@ namespace Aqueous;
 
 public class Electrician : NPC
 {
-    public override string GetName() {
+    public override string GetName()
+    {
         return "Joseph";
     }
 
@@ -11,7 +12,8 @@ public class Electrician : NPC
         return "Electrician";
     }
 
-    public override Type GetRoom() {
+    public override Type GetRoom()
+    {
         return typeof(Electrical);
     }
 

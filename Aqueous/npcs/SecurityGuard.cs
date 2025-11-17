@@ -1,4 +1,5 @@
 namespace Aqueous;
+
 public class SecurityGuard : NPC
 {
     public override string GetName()
@@ -15,6 +16,4 @@ public class SecurityGuard : NPC
     {
         return typeof(Security);
     }
-    
-    
 }

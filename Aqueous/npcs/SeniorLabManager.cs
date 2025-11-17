@@ -12,7 +12,8 @@ public class SeniorLabManager : NPC
         return "Senior Lab Manager";
     }
 
-    public override Type GetRoom() {
-        return typeof(MainLab); 
+    public override Type GetRoom()
+    {
+        return typeof(MainLab);
     }
 }

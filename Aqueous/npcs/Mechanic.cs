@@ -1,7 +1,9 @@
 namespace Aqueous;
 
-public class Mechanic : NPC {
-    public override string GetName() {
+public class Mechanic : NPC
+{
+    public override string GetName()
+    {
         return "Mike";
     }
 
@@ -9,8 +11,9 @@ public class Mechanic : NPC {
     {
         return "Mechanic";
     }
-    
-    public override Type GetRoom() {
+
+    public override Type GetRoom()
+    {
         return typeof(Reactor);
     }
 }

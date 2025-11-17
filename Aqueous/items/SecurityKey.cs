@@ -1,11 +1,14 @@
 namespace Aqueous;
 
-public class SecurityKey : IItem {
-    public string GetName() {
+public class SecurityKey : IItem
+{
+    public string GetName()
+    {
         return "Security key";
     }
 
-    public string GetDescription() {
+    public string GetDescription()
+    {
         return "Unlocks access to security cameras";
     }
 }

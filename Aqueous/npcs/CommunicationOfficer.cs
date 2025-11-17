@@ -1,7 +1,9 @@
 namespace Aqueous;
 
-public class CommunicationOfficer : NPC {
-    public override string GetName() {
+public class CommunicationOfficer : NPC
+{
+    public override string GetName()
+    {
         return "Barton";
     }
 
@@ -9,8 +11,9 @@ public class CommunicationOfficer : NPC {
     {
         return "Communication's officer";
     }
-    
-    public override Type GetRoom() {
+
+    public override Type GetRoom()
+    {
         return typeof(Communications);
     }
 }

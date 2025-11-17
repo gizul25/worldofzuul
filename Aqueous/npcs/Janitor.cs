@@ -1,7 +1,9 @@
 namespace Aqueous;
 
-public class Janitor : NPC {
-    public override string GetName() {
+public class Janitor : NPC
+{
+    public override string GetName()
+    {
         return "Patrick";
     }
 
@@ -9,8 +11,9 @@ public class Janitor : NPC {
     {
         return "Janitor";
     }
-    
-    public override Type GetRoom() {
+
+    public override Type GetRoom()
+    {
         return typeof(SleepingQuarters);
     }
 }

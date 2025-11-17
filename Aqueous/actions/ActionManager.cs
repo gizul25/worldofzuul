@@ -1,6 +1,7 @@
 namespace Aqueous;
 
-public class ActionManager {
+public class ActionManager
+{
     static Action[] allActions = [
         new FixWiringAction(),
         new EatFood(),
@@ -36,9 +37,12 @@ public class ActionManager {
     public List<Action> AvailableActions { get; private set; } = new List<Action>();
 
     /// Returns the action given the type of the action
-    public Action GetAction<T>() {
-        foreach (Action action in allActions) {
-            if (action is T) {
+    public Action GetAction<T>()
+    {
+        foreach (Action action in allActions)
+        {
+            if (action is T)
+            {
                 return action;
             }
         }
@@ -46,13 +50,17 @@ public class ActionManager {
     }
 
     /// Returns active quests which are part of any quest
-    public List<Action> GetCurrentQuestActions(GameState state) {
+    public List<Action> GetCurrentQuestActions(GameState state)
+    {
         List<Action> actions = new List<Action>();
-        foreach (Action action in allActions) {
-            if (!action.IsActive(state)) {
+        foreach (Action action in allActions)
+        {
+            if (!action.IsActive(state))
+            {
                 continue;
             }
-            if (action.GetQuestType() == null) {
+            if (action.GetQuestType() == null)
+            {
                 continue;
             }
             actions.Add(action);
@@ -62,20 +70,25 @@ public class ActionManager {
 
     /// Updates list of available actions to perform in a room.
     /// Updated after every command.
-    public void UpdateAvailableActions(GameState state) {
+    public void UpdateAvailableActions(GameState state)
+    {
         AvailableActions.Clear();
-        foreach (Action action in allActions) {
-            if (action.CanPerform(state)) {
+        foreach (Action action in allActions)
+        {
+            if (action.CanPerform(state))
+            {
                 AvailableActions.Add(action);
             }
         }
     }
 
     /// Prints all the available commands
-    public void PrintAvailableActions() {
-        for (int i = 0; i < AvailableActions.Count; i++) {
+    public void PrintAvailableActions()
+    {
+        for (int i = 0; i < AvailableActions.Count; i++)
+        {
             Action action = AvailableActions[i];
-            Console.WriteLine("[\x1b[32m" + (i+1) + "\x1b[0m] " + $"\x1b[33m{action.GetName()}\x1b[0m");
+            Console.WriteLine("[\x1b[32m" + (i + 1) + "\x1b[0m] " + $"\x1b[33m{action.GetName()}\x1b[0m");
         }
     }
 }

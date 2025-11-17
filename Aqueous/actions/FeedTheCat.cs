@@ -1,34 +1,42 @@
 namespace Aqueous;
 
-public class FeedTheCat : Action {
+public class FeedTheCat : Action
+{
     public FeedTheCat()
     {
         Enable();
     }
-    
-    public override string GetName() {
+
+    public override string GetName()
+    {
         return "Feed the cat";
     }
 
-    public override Type GetRoom() {
+    public override Type GetRoom()
+    {
         return typeof(Cafeteria);
     }
 
-    public override Type? GetQuestType() {
+    public override Type? GetQuestType()
+    {
         return typeof(MainStoryline);
     }
 
-    public override bool IsActive(GameState state) {
-        if (!base.IsActive(state)) {
+    public override bool IsActive(GameState state)
+    {
+        if (!base.IsActive(state))
+        {
             return false;
         }
-        if (!state.itemManager.HasItem<Leftovers>()) {
+        if (!state.itemManager.HasItem<Leftovers>())
+        {
             return false;
         }
         return true;
     }
 
-    public override void Perform(GameState state) {
+    public override void Perform(GameState state)
+    {
         base.Perform(state);
         Complete();
         state.itemManager.ConsumeItem<Leftovers>();

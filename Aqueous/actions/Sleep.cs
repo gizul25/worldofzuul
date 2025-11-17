@@ -1,11 +1,14 @@
 namespace Aqueous;
 
-public class Sleep : Action {
-    public Sleep() {
+public class Sleep : Action
+{
+    public Sleep()
+    {
         Enable();
     }
 
-    public override string GetName() {
+    public override string GetName()
+    {
         return "Get rest";
     }
 
@@ -13,13 +16,14 @@ public class Sleep : Action {
     {
         return typeof(SleepingQuarters);
     }
-    
+
     public override Type? GetQuestType()
     {
         return typeof(SideQuests);
     }
 
-    public override void Perform(GameState state) {
+    public override void Perform(GameState state)
+    {
         base.Perform(state);
         Complete();
         Console.WriteLine("You get into your bed and hope for a peaceful slumber, praying tomorrow will bring something worth living for.");
