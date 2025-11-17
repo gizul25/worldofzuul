@@ -14,7 +14,7 @@ public class RatTrapCrewCabin : Action
 
     public override Type? GetQuestType()
     {
-        return typeof(MainStoryline);
+        return typeof(SideQuests);
     }
 
     public override void Perform(GameState state)

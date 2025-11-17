@@ -16,7 +16,7 @@ public class RatTrapStorage : Action
 
     public override Type? GetQuestType()
     {
-        return typeof(MainStoryline);
+        return typeof(SideQuests);
     }
 
     public void PlaceTrap()
