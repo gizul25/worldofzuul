@@ -20,7 +20,7 @@ public class SupplyComms : Action
     public override void Perform(GameState state)
     {
         base.Perform(state);
-        Console.WriteLine("Barton: We need more staff for the marine reasearchfrom our mysterious suppliers, be careful and chose wisely, it might be dangerous");
+        Console.WriteLine("Barton: We need more staff for the marine reasearch from our mysterious suppliers, be careful and chose wisely, it might be dangerous");
         Console.WriteLine("Barton: We need one microscope and 14 watch glasses and 10 gloves");
         Console.WriteLine("Barton: Please choose two differents companies to order the items from:");
 
