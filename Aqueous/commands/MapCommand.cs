@@ -93,6 +93,5 @@ Cooling system ----Reactor    |                        Sleeping     Primary
         {
             Console.WriteLine(str);
         }
-
     }
 }
