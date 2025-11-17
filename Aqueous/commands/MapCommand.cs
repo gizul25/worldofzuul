@@ -83,7 +83,6 @@ Cooling system ----Reactor    |                        Sleeping     Primary
         if (onMap)
         {
             int i = first;
-            Console.WriteLine(first);
             foreach (string word in roomNameSplit)
             {
                 if (!mapSplit[i].Contains(word))
