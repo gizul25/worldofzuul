@@ -22,7 +22,7 @@ public class FeedMickey : Action
         base.Perform(state);
         Complete();
         Console.WriteLine("You cautiously approach the tank and open the top lid, making sure your fingers are out of biting range.");
-        Console.WriteLine("You reach into the bucket and grab a handfull of small fish before throwing them into the tank.");
+        Console.WriteLine("You reach into the bucket and grab a handful of small fish before throwing them into the tank.");
         Console.WriteLine("Once the bucket's empty, you close the lid and set the bucket down, watching Mickey devour the poor fishies.");
         Console.WriteLine("You hear Viktor coming behind you.");
         Console.WriteLine("The job is done. You should probably talk to Viktor.");

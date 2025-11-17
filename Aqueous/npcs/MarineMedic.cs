@@ -9,7 +9,7 @@ public class MarineMedic : NPC
 
     public override string GetJobTitle()
     {
-        return "Medic(marine)";
+        return "Medic - marine";
     }
 
     public override Type GetRoom()
