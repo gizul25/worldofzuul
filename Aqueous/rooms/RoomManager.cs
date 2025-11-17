@@ -30,7 +30,7 @@ public class RoomManager
         crewCabin.SetExits(null, elevator, cafeteria, null);
         elevator.SetExits(null, null, null, crewCabin);
         cafeteria.SetExits(crewCabin, primaryResearch, sleepingQuarters, medBay);
-        primaryResearch.SetExits(null, null, null, cafeteria);
+        primaryResearch.SetExits(cafeteria, null, null, null);
         medBay.SetExits(null, cafeteria, null, upperEngine);
         sleepingQuarters.SetExits(cafeteria, null, mainLab, null);
         mainLab.SetExits(sleepingQuarters, shields, communications, storage);
