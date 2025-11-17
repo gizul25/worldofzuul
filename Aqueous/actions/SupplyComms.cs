@@ -15,7 +15,7 @@ public class SupplyComms : Action
 
     public override Type GetRoom()
     {
-        return typeof(SupplyComms);
+        return typeof(Communications);
     }
 
     public override Type? GetQuestType()
