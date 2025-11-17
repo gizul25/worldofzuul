@@ -2,6 +2,12 @@ namespace Aqueous;
 
 class IdentifySpecimens : Action
 {
+    public IdentifySpecimens()
+    {
+        // TODO
+        Enable();
+    }
+
     public override string GetName()
     {
         return "Identify the unknown specimen";
@@ -19,28 +25,40 @@ class IdentifySpecimens : Action
 
     public override void Perform(GameState state)
     {
-
-        //TODO: Fill in with a real trivia question, that requires to discern certain species by a key trait 
-
         base.Perform(state);
-        Console.WriteLine("Insert a multiple-choice question here");
-        string? input = Console.ReadLine();
-        switch (input)
+        // Source: https://onlineexammaker.com/kb/30-dolphin-trivia-quiz-questions-answers/
+        Console.WriteLine("Time for a trivia question.");
+        Console.WriteLine("Which type of dolphin is well-known for its distinctive black and white coloration and is often seen in marine parks and aquariums?");
+        Console.WriteLine("A. Common dolphin");
+        Console.WriteLine("B. Bottlenose dolphin");
+        Console.WriteLine("C. Spinner dolphin");
+        Console.WriteLine("D. Dusky dolphin");
+
+        bool done = false;
+        while (!done)
         {
-            case "A":
-                Console.WriteLine("Incorrect!");
-                break;
-            case "B":
-                Console.WriteLine("Correct!");
-                break;
-            case "C":
-                Console.WriteLine("Incorrect!");
-                break;
-            default:
-                Console.WriteLine("Wrong Input!");
-                this.Perform(state);
-                break;
+            string? input = Console.ReadLine();
+            switch (input)
+            {
+                case "A":
+                    Console.WriteLine("Incorrect!");
+                    break;
+                case "B":
+                    Console.WriteLine("Correct!");
+                    done = true;
+                    break;
+                case "C":
+                    Console.WriteLine("Incorrect!");
+                    break;
+                case "D":
+                    Console.WriteLine("Incorrect!");
+                    break;
+                default:
+                    Console.WriteLine("Wrong Input!");
+                    break;
+            }
         }
+        Complete();
     }
 
 }
