@@ -1,6 +1,6 @@
 namespace Aqueous;
 
-public class SimpleCommand : Command
+public abstract class SimpleCommand : Command
 {
     /// Runs the command only if the input matches command name
     public override bool TryExecute(string input, GameState state)

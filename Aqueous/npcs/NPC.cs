@@ -1,6 +1,6 @@
 namespace Aqueous;
 
-public class NPC
+public abstract class NPC
 {
     /// Returns the display name of the NPC
     public virtual string GetName()

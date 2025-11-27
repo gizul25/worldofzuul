@@ -1,6 +1,6 @@
 namespace Aqueous;
 
-public class Action
+public abstract class Action
 {
     /// Controls if the action can perform check should even run in the first
     /// place. Used to enable/disable new actions after completing some of them.
