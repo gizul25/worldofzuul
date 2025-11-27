@@ -3,7 +3,7 @@
     public class Room
     {
         public Dictionary<Direction, Room> Exits { get; } = new();
-        public Room? Vent { get; }
+        public Room? Vent { get; private set; }
 
         /// Returns the display name of the room
         public virtual string GetName()

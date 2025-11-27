@@ -3,7 +3,7 @@ namespace Aqueous;
 /// Stores all changing parts of the game
 public class GameState
 {
-    public Room CurrentRoom { get; }
+    public Room CurrentRoom { get; private set; }
     public bool ShouldExit = false;
     public bool IsJustEnteredRoom = true;
     public RoomManager roomManager { get; } = new RoomManager();

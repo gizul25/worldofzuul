@@ -43,7 +43,7 @@ public class SupplyComms : Action
 
         while (true)
         {
-            string input = Console.ReadLine();
+            string input = Console.ReadLine()!;
 
             if (input == "The Aquanova" || input == "1")
             {
