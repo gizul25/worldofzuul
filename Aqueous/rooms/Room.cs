@@ -2,8 +2,8 @@
 {
     public class Room
     {
-        public Dictionary<Direction, Room> Exits { get; private set; } = new();
-        public Room? Vent { get; private set; }
+        public Dictionary<Direction, Room> Exits { get; } = new();
+        public Room? Vent { get; }
 
         /// Returns the display name of the room
         public virtual string GetName()

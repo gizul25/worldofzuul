@@ -7,7 +7,7 @@ public class Action
     private bool isEnabled = false;
 
     /// Used for different endings
-    public bool IsCompleted { get; private set; } = false;
+    public bool IsCompleted { get; } = false;
 
     /// Returns display name of the action
     public virtual string GetName()

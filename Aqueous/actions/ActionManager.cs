@@ -34,7 +34,7 @@ public class ActionManager
         new IdentifySpecimens(),
         new CollectMarineFloraSamples()
     ];
-    public List<Action> AvailableActions { get; private set; } = new List<Action>();
+    public List<Action> AvailableActions { get; } = new List<Action>();
 
     /// Returns the action given the type of the action
     public Action GetAction<T>()

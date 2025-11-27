@@ -2,7 +2,7 @@ namespace Aqueous;
 
 public class ItemManager
 {
-    public List<IItem> Items { get; private set; } = new();
+    public List<IItem> Items { get; } = new();
 
     /// Adds an item to player's inventory
     public void AddItem(IItem item)
