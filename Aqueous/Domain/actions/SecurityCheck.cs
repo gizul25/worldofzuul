@@ -1,0 +1,41 @@
+namespace Aqueous.Domain;
+
+public class SecurityCheck : Action
+{
+    public override string GetName()
+    {
+        return "Security check";
+    }
+
+    public override Type GetRoom()
+    {
+        return typeof(Security);
+    }
+
+    public override Type? GetQuestType()
+    {
+        return typeof(SideQuests);
+    }
+
+    public override bool IsActive(GameState state)
+    {
+        if (!base.IsActive(state))
+        {
+            return false;
+        }
+        if (!state.itemManager.HasItem<SecurityKey>())
+        {
+            return false;
+        }
+        return true;
+    }
+
+    public override void Perform(GameState state)
+    {
+        base.Perform(state);
+        Complete();
+        state.itemManager.ConsumeItem<SecurityKey>();
+        Console.WriteLine("You use the key you've got to make sure the security is working like it should. Everything seems fine.");
+        state.actionManager.GetAction<AdjustReactorTemp>().Enable();
+    }
+}
