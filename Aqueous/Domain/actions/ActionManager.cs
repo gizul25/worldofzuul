@@ -1,8 +1,11 @@
+using System.Text.Json.Serialization;
+
 namespace Aqueous.Domain;
 
 public class ActionManager
 {
-    static Action[] allActions = [
+    [JsonInclude]
+    private Action[] allActions = [
         new FixWiringAction(),
         new EatFood(),
         new Sleep(),
@@ -34,6 +37,7 @@ public class ActionManager
         new IdentifySpecimens(),
         new CollectMarineFloraSamples()
     ];
+    [JsonInclude]
     public List<Action> AvailableActions { get; } = new List<Action>();
 
     /// Returns the action given the type of the action

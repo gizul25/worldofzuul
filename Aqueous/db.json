@@ -1,0 +1,163 @@
+{
+  "CurrentRoom": "Aqueous.Domain.Cafeteria",
+  "IsJustEnteredRoom": false,
+  "actionManager": {
+    "AvailableActions": [],
+    "allActions": [
+      {
+        "$type": "FixWiringAction",
+        "IsCompleted": false,
+        "isEnabled": true
+      },
+      {
+        "$type": "EatFood",
+        "IsCompleted": false,
+        "isEnabled": false
+      },
+      {
+        "$type": "Sleep",
+        "IsCompleted": false,
+        "isEnabled": false
+      },
+      {
+        "$type": "CheckingOnMeds",
+        "IsCompleted": false,
+        "isEnabled": false
+      },
+      {
+        "$type": "DoResearch",
+        "IsCompleted": false,
+        "isEnabled": false
+      },
+      {
+        "$type": "Socialize",
+        "IsCompleted": false,
+        "isEnabled": false
+      },
+      {
+        "$type": "DoExperiments",
+        "IsCompleted": false,
+        "isEnabled": false
+      },
+      {
+        "$type": "SecurityCheck",
+        "IsCompleted": false,
+        "isEnabled": false
+      },
+      {
+        "$type": "ShieldMaintenance",
+        "IsCompleted": false,
+        "isEnabled": true
+      },
+      {
+        "$type": "FeedMickey",
+        "IsCompleted": false,
+        "isEnabled": false
+      },
+      {
+        "$type": "RationsCheckUp",
+        "IsCompleted": false,
+        "isEnabled": false
+      },
+      {
+        "$type": "RatTrapStorage",
+        "trapsPlaced": 0,
+        "IsCompleted": false,
+        "isEnabled": false
+      },
+      {
+        "$type": "RatTrapDelivery",
+        "IsCompleted": false,
+        "isEnabled": false
+      },
+      {
+        "$type": "RatTrapShields",
+        "IsCompleted": false,
+        "isEnabled": false
+      },
+      {
+        "$type": "RatTrapCoolingSystem",
+        "IsCompleted": false,
+        "isEnabled": false
+      },
+      {
+        "$type": "RatTrapCrewCabin",
+        "IsCompleted": false,
+        "isEnabled": false
+      },
+      {
+        "$type": "PetCat",
+        "IsCompleted": false,
+        "isEnabled": false
+      },
+      {
+        "$type": "TalkToJoey",
+        "IsCompleted": true,
+        "isEnabled": false
+      },
+      {
+        "$type": "TalkToJoey2",
+        "IsCompleted": false,
+        "isEnabled": false
+      },
+      {
+        "$type": "TalkToSteve",
+        "IsCompleted": false,
+        "isEnabled": false
+      },
+      {
+        "$type": "FeedTheCat",
+        "IsCompleted": false,
+        "isEnabled": false
+      },
+      {
+        "$type": "TalkToViktor",
+        "IsCompleted": false,
+        "isEnabled": false
+      },
+      {
+        "$type": "DecontaminateFishSamples",
+        "IsCompleted": false,
+        "isEnabled": false
+      },
+      {
+        "$type": "CheckCoralReefStatus",
+        "IsCompleted": false,
+        "isEnabled": false
+      },
+      {
+        "$type": "AdjustReactorTemp",
+        "IsCompleted": false,
+        "isEnabled": false
+      },
+      {
+        "$type": "StoreWaterSamples",
+        "IsCompleted": false,
+        "isEnabled": false
+      },
+      {
+        "$type": "UploadResearchData",
+        "IsCompleted": false,
+        "isEnabled": false
+      },
+      {
+        "$type": "SupplyComms",
+        "IsCompleted": false,
+        "isEnabled": false
+      },
+      {
+        "$type": "IdentifySpecimens",
+        "IsCompleted": false,
+        "isEnabled": true
+      },
+      {
+        "$type": "CollectMarineFloraSamples",
+        "IsCompleted": false,
+        "isEnabled": false
+      }
+    ]
+  },
+  "itemManager": {
+    "Items": []
+  }
+}

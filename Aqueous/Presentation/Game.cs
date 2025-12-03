@@ -1,14 +1,18 @@
 ﻿namespace Aqueous.Presentation;
 
 using Aqueous.Domain;
+using Aqueous.Persistence;
 
 public class Game
 {
-    private GameState state = new GameState();
+    private GameState state;
 
     /// Prints welcome and starts game loop.
     public void Play()
     {
+        JSONPersistence persistence = new JSONPersistence("db.json");
+        state = persistence.LoadGameState();
+
         PrintWelcome();
 
         while (!state.ShouldExit)
@@ -16,6 +20,7 @@ public class Game
             CommandManager.Run(state);
             state.actionManager.UpdateAvailableActions(state);
         }
+        state.Save();
         Console.WriteLine("Thank you for playing \x1b[36mAqueous\x1b[0m! Remember to be mindful of your actions unless you want the world to end!");
     }
 

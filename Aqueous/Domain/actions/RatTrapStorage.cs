@@ -1,7 +1,10 @@
+using System.Text.Json.Serialization;
+
 namespace Aqueous.Domain;
 
 public class RatTrapStorage : Action
 {
+    [JsonInclude]
     private int trapsPlaced = 0;
 
     public override string GetName()

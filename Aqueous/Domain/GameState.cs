@@ -1,3 +1,5 @@
+using Aqueous.Persistence;
+
 namespace Aqueous.Domain;
 
 /// Stores all changing parts of the game
@@ -12,9 +14,26 @@ public class GameState
     public NPCManager npcManager { get; } = new NPCManager();
     public QuestManager questManager { get; } = new QuestManager();
 
-    public GameState()
+    private IPersistence persistence;
+
+    public GameState(IPersistence persistence)
     {
         this.CurrentRoom = roomManager.GetStartingRoom();
+        this.persistence = persistence;
+    }
+
+    public GameState(IPersistence persistence, String roomName, ActionManager actionManager, ItemManager itemManager)
+    {
+        Type roomType = Type.GetType(roomName)!;
+        this.CurrentRoom = roomManager.GetRoom(roomType);
+        this.actionManager = actionManager;
+        this.itemManager = itemManager;
+        this.persistence = persistence;
+    }
+
+    public void Save()
+    {
+        persistence.SaveGameState(this);
     }
 
     /// Moves the player to a different room

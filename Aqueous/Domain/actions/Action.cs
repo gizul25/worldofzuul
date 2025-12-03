@@ -1,12 +1,47 @@
+using System.Text.Json.Serialization;
+
 namespace Aqueous.Domain;
+
+[JsonDerivedType(typeof(AdjustReactorTemp), typeDiscriminator: "AdjustReactorTemp")]
+[JsonDerivedType(typeof(CheckCoralReefStatus), typeDiscriminator: "CheckCoralReefStatus")]
+[JsonDerivedType(typeof(CheckingOnMeds), typeDiscriminator: "CheckingOnMeds")]
+[JsonDerivedType(typeof(CollectMarineFloraSamples), typeDiscriminator: "CollectMarineFloraSamples")]
+[JsonDerivedType(typeof(DecontaminateFishSamples), typeDiscriminator: "DecontaminateFishSamples")]
+[JsonDerivedType(typeof(DoExperiments), typeDiscriminator: "DoExperiments")]
+[JsonDerivedType(typeof(DoResearch), typeDiscriminator: "DoResearch")]
+[JsonDerivedType(typeof(EatFood), typeDiscriminator: "EatFood")]
+[JsonDerivedType(typeof(FeedMickey), typeDiscriminator: "FeedMickey")]
+[JsonDerivedType(typeof(FeedTheCat), typeDiscriminator: "FeedTheCat")]
+[JsonDerivedType(typeof(FixWiringAction), typeDiscriminator: "FixWiringAction")]
+[JsonDerivedType(typeof(IdentifySpecimens), typeDiscriminator: "IdentifySpecimens")]
+[JsonDerivedType(typeof(PetCat), typeDiscriminator: "PetCat")]
+[JsonDerivedType(typeof(RationsCheckUp), typeDiscriminator: "RationsCheckUp")]
+[JsonDerivedType(typeof(RatTrapCoolingSystem), typeDiscriminator: "RatTrapCoolingSystem")]
+[JsonDerivedType(typeof(RatTrapCrewCabin), typeDiscriminator: "RatTrapCrewCabin")]
+[JsonDerivedType(typeof(RatTrapDelivery), typeDiscriminator: "RatTrapDelivery")]
+[JsonDerivedType(typeof(RatTrapShields), typeDiscriminator: "RatTrapShields")]
+[JsonDerivedType(typeof(RatTrapStorage), typeDiscriminator: "RatTrapStorage")]
+[JsonDerivedType(typeof(SecurityCheck), typeDiscriminator: "SecurityCheck")]
+[JsonDerivedType(typeof(ShieldMaintenance), typeDiscriminator: "ShieldMaintenance")]
+[JsonDerivedType(typeof(Sleep), typeDiscriminator: "Sleep")]
+[JsonDerivedType(typeof(Socialize), typeDiscriminator: "Socialize")]
+[JsonDerivedType(typeof(StoreWaterSamples), typeDiscriminator: "StoreWaterSamples")]
+[JsonDerivedType(typeof(SupplyComms), typeDiscriminator: "SupplyComms")]
+[JsonDerivedType(typeof(TalkToJoey), typeDiscriminator: "TalkToJoey")]
+[JsonDerivedType(typeof(TalkToJoey2), typeDiscriminator: "TalkToJoey2")]
+[JsonDerivedType(typeof(TalkToSteve), typeDiscriminator: "TalkToSteve")]
+[JsonDerivedType(typeof(TalkToViktor), typeDiscriminator: "TalkToViktor")]
+[JsonDerivedType(typeof(UploadResearchData), typeDiscriminator: "UploadResearchData")]
 
 public abstract class Action
 {
     /// Controls if the action can perform check should even run in the first
     /// place. Used to enable/disable new actions after completing some of them.
+    [JsonInclude]
     private bool isEnabled = false;
 
     /// Used for different endings
+    [JsonInclude]
     public bool IsCompleted { get; private set; } = false;
 
     /// Returns display name of the action
