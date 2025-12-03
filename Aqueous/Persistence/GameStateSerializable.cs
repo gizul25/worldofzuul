@@ -6,13 +6,13 @@ namespace Aqueous.Persistence;
 public class GameStateSerializable
 {
     [JsonInclude]
-    public string CurrentRoom { get; set; }
+    public string CurrentRoom { get; set; } = "";
     [JsonInclude]
-    public bool IsJustEnteredRoom { get; set; }
+    public bool IsJustEnteredRoom { get; set; } = false;
     [JsonInclude]
-    public ActionManager actionManager { get; set; }
+    public ActionManager actionManager { get; set; } = new();
     [JsonInclude]
-    public ItemManager itemManager { get; set; }
+    public ItemManager itemManager { get; set; } = new();
 
     public GameStateSerializable()
     {
