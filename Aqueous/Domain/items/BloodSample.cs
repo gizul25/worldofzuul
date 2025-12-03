@@ -1,13 +1,13 @@
 namespace Aqueous.Domain;
 
-public class BloodSample : IItem
+public class BloodSample : Item
 {
-    public string GetName()
+    public override string GetName()
     {
         return "Blood sample";
     }
 
-    public string GetDescription()
+    public override string GetDescription()
     {
         return "Blood sample from Mickey";
     }

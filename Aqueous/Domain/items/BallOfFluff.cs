@@ -1,13 +1,13 @@
 namespace Aqueous.Domain;
 
-public class BallOfFluff : IItem
+public class BallOfFluff : Item
 {
-    public string GetName()
+    public override string GetName()
     {
         return "Ball of Fluff";
     }
 
-    public string GetDescription()
+    public override string GetDescription()
     {
         return "Fluffy fur of the local station's cat";
     }

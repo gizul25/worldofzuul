@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using Aqueous.Domain;
 using Aqueous.Presentation;
+using Aqueous.Persistence;
 
 namespace UnitTests
 {
@@ -11,7 +12,8 @@ namespace UnitTests
         [SetUp]
         public void Setup()
         {
-            state = new GameState();
+            IPersistence persistence = new DummyPersistence();
+            state = new GameState(persistence);
         }
 
         [Test]
@@ -55,6 +57,24 @@ namespace UnitTests
 
             Room expectedRoom = state.roomManager.GetRoom(typeof(UpperEngine));
             Assert.AreEqual(room, expectedRoom);
+            Assert.Pass();
+        }
+
+        [Test]
+        public void PersistenceTest()
+        {
+            JSONPersistence persistence = new JSONPersistence("db_test.json");
+            state = new GameState(persistence);
+
+            Assert.AreEqual(0, state.itemManager.Items.Count);
+            state.itemManager.AddItem(new SecurityKey());
+            Assert.AreEqual(1, state.itemManager.Items.Count);
+            state.Save();
+
+            state = persistence.LoadGameState();
+            Console.WriteLine(state.itemManager.Items);
+            Console.WriteLine(state.itemManager.Items.Count);
+            Assert.AreEqual(1, state.itemManager.Items.Count);
             Assert.Pass();
         }
     }

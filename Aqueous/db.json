@@ -1,5 +1,5 @@
 {
-  "CurrentRoom": "Aqueous.Domain.Cafeteria",
+  "CurrentRoom": "Aqueous.Domain.Shields",
   "IsJustEnteredRoom": false,
   "actionManager": {
     "AvailableActions": [],
@@ -7,7 +7,7 @@
       {
         "$type": "FixWiringAction",
         "IsCompleted": false,
-        "isEnabled": true
+        "isEnabled": false
       },
       {
         "$type": "EatFood",
@@ -42,12 +42,12 @@
       {
         "$type": "SecurityCheck",
         "IsCompleted": false,
-        "isEnabled": false
+        "isEnabled": true
       },
       {
         "$type": "ShieldMaintenance",
-        "IsCompleted": false,
-        "isEnabled": true
+        "IsCompleted": true,
+        "isEnabled": false
       },
       {
         "$type": "FeedMickey",
@@ -92,8 +92,8 @@
       },
       {
         "$type": "TalkToJoey",
-        "IsCompleted": true,
-        "isEnabled": false
+        "IsCompleted": false,
+        "isEnabled": true
       },
       {
         "$type": "TalkToJoey2",
@@ -148,7 +148,7 @@
       {
         "$type": "IdentifySpecimens",
         "IsCompleted": false,
-        "isEnabled": true
+        "isEnabled": false
       },
       {
         "$type": "CollectMarineFloraSamples",
@@ -158,6 +158,11 @@
     ]
   },
   "itemManager": {
-    "Items": []
+    "Items": [
+      {
+        "$type": "SecurityKey",
+        "dummy": false
+      }
+    ]
   }
 }

@@ -1,11 +1,14 @@
+using System.Text.Json.Serialization;
+
 namespace Aqueous.Domain;
 
 public class ItemManager
 {
-    public List<IItem> Items { get; } = new();
+    [JsonInclude]
+    public List<Item> Items = new();
 
     /// Adds an item to player's inventory
-    public void AddItem(IItem item)
+    public void AddItem(Item item)
     {
         Items.Add(item);
     }
@@ -13,11 +16,11 @@ public class ItemManager
     /// Returns the action given the type of the action
     public T FindItem<T>()
     {
-        foreach (IItem item in Items)
+        foreach (Item item in Items)
         {
-            if (item is T)
+            if (item is T t)
             {
-                return (T)item;
+                return t;
             }
         }
         throw new Exception("Item not found.");
@@ -26,7 +29,7 @@ public class ItemManager
     /// Checks if the user has a given type item in the inventory
     public bool HasItem<T>()
     {
-        foreach (IItem item in Items)
+        foreach (Item item in Items)
         {
             if (item is T)
             {
@@ -46,7 +49,7 @@ public class ItemManager
         {
             throw new Exception("Item not found.");
         }
-        IItem item = (IItem)specificItem;
-        Items.Remove(item);
+        Item? item = specificItem as Item;
+        Items.Remove(item!);
     }
 }

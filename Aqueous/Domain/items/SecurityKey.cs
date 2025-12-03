@@ -1,13 +1,13 @@
 namespace Aqueous.Domain;
 
-public class SecurityKey : IItem
+public class SecurityKey : Item
 {
-    public string GetName()
+    public override string GetName()
     {
         return "Security key";
     }
 
-    public string GetDescription()
+    public override string GetDescription()
     {
         return "Unlocks access to security cameras";
     }

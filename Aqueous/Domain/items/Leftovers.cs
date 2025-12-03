@@ -1,13 +1,13 @@
 namespace Aqueous.Domain;
 
-public class Leftovers : IItem
+public class Leftovers : Item
 {
-    public string GetName()
+    public override string GetName()
     {
         return "Leftovers from Joey";
     }
 
-    public string GetDescription()
+    public override string GetDescription()
     {
         return "Bits and pieces of yesterday's dinner. Something a certain fluff ball would love to get its paws on.";
     }

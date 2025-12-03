@@ -11,7 +11,7 @@ public class ItemsCommand : SimpleCommand
 
     public override void Run(GameState state)
     {
-        List<IItem> items = state.itemManager.Items;
+        List<Item> items = state.itemManager.Items;
         if (items.Count == 0)
         {
             Console.WriteLine("No items found in inventory.");
@@ -20,7 +20,7 @@ public class ItemsCommand : SimpleCommand
 
         for (int i = 0; i < items.Count; i++)
         {
-            IItem item = items[i];
+            Item item = items[i];
             Console.WriteLine($"[\x1b[32m{i + 1}\x1b[0m] \x1b[33m{item.GetName()}\x1b[0m");
             Console.WriteLine(item.GetDescription());
         }
