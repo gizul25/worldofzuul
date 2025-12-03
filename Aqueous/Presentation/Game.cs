@@ -5,7 +5,7 @@ using Aqueous.Persistence;
 
 public class Game
 {
-    private GameState state;
+    private GameState? state;
 
     /// Prints welcome and starts game loop.
     public void Play()

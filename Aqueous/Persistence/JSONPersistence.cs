@@ -20,7 +20,6 @@ public class JSONPersistence : IPersistence
             return new GameState(this);
 
         string json = File.ReadAllText(_filePath);
-        Console.WriteLine(json);
         GameStateSerializable? data = JsonSerializer.Deserialize<GameStateSerializable>(json);
         if (data == null)
         {
